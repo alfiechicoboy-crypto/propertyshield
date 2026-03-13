@@ -280,7 +280,7 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-12">
             <Link href="/reviews">
-              <Button variant="link" className="text-primary hover:text-primary/80">
+              <Button variant="ghost" className="text-primary hover:text-primary/80">
                 Read More Reviews →
               </Button>
             </Link>

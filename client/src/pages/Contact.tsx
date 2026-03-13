@@ -197,7 +197,7 @@ export default function ContactPage() {
                       <FormField control={form.control} name="isEmergency" render={({ field }) => (
                         <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-border p-4 bg-background/50">
                           <FormControl>
-                            <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                            <Checkbox checked={field.value ?? false} onCheckedChange={(checked) => field.onChange(checked === true)} />
                           </FormControl>
                           <div className="space-y-1 leading-none">
                             <FormLabel className="text-destructive font-semibold cursor-pointer">Is this an emergency?</FormLabel>
