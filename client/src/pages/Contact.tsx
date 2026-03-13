@@ -65,7 +65,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-foreground">Phone</h3>
-                    <a href="tel:01325000000" className="text-muted-foreground hover:text-primary transition-colors text-lg">01325 000000</a>
+                    <div className="flex flex-col gap-1">
+                      <a href="tel:07753351619" className="text-muted-foreground hover:text-primary transition-colors">Alfie: 07753 351619</a>
+                      <a href="tel:07424376189" className="text-muted-foreground hover:text-primary transition-colors">Jacob: 07424 376189</a>
+                    </div>
                   </div>
                 </div>
                 

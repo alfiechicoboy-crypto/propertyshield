@@ -87,9 +87,9 @@ export default function HomePage() {
                 Get a Free Quote
               </Button>
             </Link>
-            <a href="tel:01325000000" className="w-full sm:w-auto">
+            <a href="tel:07753351619" className="w-full sm:w-auto">
               <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary text-primary hover:bg-primary/10 text-lg px-8 h-14 font-semibold">
-                Call Now: 01325 000000
+                Call Now: 07753 351619
               </Button>
             </a>
           </motion.div>
@@ -376,9 +376,9 @@ export default function HomePage() {
                 Get Free Quote
               </Button>
             </Link>
-            <a href="tel:01325000000" className="w-full sm:w-auto">
+            <a href="tel:07753351619" className="w-full sm:w-auto">
               <Button size="lg" className="w-full sm:w-auto bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 h-14 font-bold">
-                Call: 01325 000000
+                Call Alfie: 07753 351619
               </Button>
             </a>
           </motion.div>

@@ -4,76 +4,78 @@
 @tailwind utilities;
 
 /* ============================================================
-   PROPERTYSIELD UK LTD — Premium Dark Theme
-   Brand: Black/Charcoal/Navy backgrounds + Metallic Gold accents
+   PROPERTYSHIELD UK LTD — Exact Brand Theme
+   Background: Dark Charcoal #1A1A1A
+   Gold:       Antique Warm Gold #C9962A  (hsl 40 68% 48%)
+   Burgundy:   Deep Maroon #8B1A2C        (hsl 349 70% 32%)
    ============================================================ */
 
 :root {
-  --button-outline: rgba(201, 168, 76, 0.25);
-  --badge-outline: rgba(201, 168, 76, 0.15);
+  --button-outline: rgba(201, 150, 42, 0.30);
+  --badge-outline: rgba(201, 150, 42, 0.15);
   --opaque-button-border-intensity: -8;
 
-  /* Elevation overlays */
-  --elevate-1: rgba(201, 168, 76, 0.06);
-  --elevate-2: rgba(201, 168, 76, 0.12);
+  /* Elevation overlays — gold-tinted */
+  --elevate-1: rgba(201, 150, 42, 0.06);
+  --elevate-2: rgba(201, 150, 42, 0.13);
 
   /* ---- Core Background/Foreground ---- */
-  --background: 220 15% 8%;        /* Deep charcoal */
-  --foreground: 40 20% 92%;        /* Off-white */
+  --background: 220 12% 8%;         /* Near-black dark charcoal */
+  --foreground: 40 25% 93%;         /* Warm off-white */
 
   /* ---- Border ---- */
-  --border: 215 20% 18%;
+  --border: 220 12% 18%;
 
-  /* ---- Card (dark navy panels) ---- */
-  --card: 215 25% 12%;
-  --card-foreground: 40 20% 92%;
-  --card-border: 215 20% 20%;
+  /* ---- Card (slightly lighter dark panels) ---- */
+  --card: 220 14% 12%;
+  --card-foreground: 40 25% 93%;
+  --card-border: 220 12% 20%;
 
   /* ---- Sidebar ---- */
-  --sidebar: 220 18% 7%;
-  --sidebar-foreground: 40 20% 85%;
-  --sidebar-border: 215 20% 16%;
-  --sidebar-primary: 43 55% 52%;
-  --sidebar-primary-foreground: 220 15% 8%;
-  --sidebar-accent: 215 25% 18%;
-  --sidebar-accent-foreground: 40 20% 92%;
-  --sidebar-ring: 43 55% 52%;
+  --sidebar: 220 14% 7%;
+  --sidebar-foreground: 40 20% 88%;
+  --sidebar-border: 220 12% 16%;
+  --sidebar-primary: 40 68% 48%;
+  --sidebar-primary-foreground: 220 12% 8%;
+  --sidebar-accent: 220 14% 16%;
+  --sidebar-accent-foreground: 40 25% 93%;
+  --sidebar-ring: 40 68% 48%;
 
   /* ---- Popover ---- */
-  --popover: 215 25% 12%;
-  --popover-foreground: 40 20% 92%;
-  --popover-border: 215 20% 20%;
+  --popover: 220 14% 12%;
+  --popover-foreground: 40 25% 93%;
+  --popover-border: 220 12% 20%;
 
-  /* ---- Primary (Metallic Gold) ---- */
-  --primary: 43 55% 52%;
-  --primary-foreground: 220 15% 8%;
+  /* ---- Primary — Antique Warm Gold ---- */
+  --primary: 40 68% 48%;
+  --primary-foreground: 220 15% 6%;
 
-  /* ---- Secondary (dark steel) ---- */
-  --secondary: 215 20% 16%;
+  /* ---- Secondary ---- */
+  --secondary: 220 14% 16%;
   --secondary-foreground: 40 20% 88%;
 
   /* ---- Muted ---- */
-  --muted: 215 20% 15%;
-  --muted-foreground: 215 12% 60%;
+  --muted: 220 12% 15%;
+  --muted-foreground: 220 10% 58%;
 
-  /* ---- Accent (gold accent) ---- */
-  --accent: 43 55% 52%;
-  --accent-foreground: 220 15% 8%;
+  /* ---- Accent — same gold ---- */
+  --accent: 40 68% 48%;
+  --accent-foreground: 220 15% 6%;
 
   /* ---- Destructive ---- */
-  --destructive: 0 72% 58%;
-  --destructive-foreground: 40 20% 95%;
+  --destructive: 0 72% 55%;
+  --destructive-foreground: 40 25% 95%;
 
   /* ---- Input / Ring ---- */
-  --input: 215 20% 22%;
-  --ring: 43 55% 52%;
+  --input: 220 12% 22%;
+  --ring: 40 68% 48%;
 
   /* ---- Charts ---- */
-  --chart-1: 43 55% 52%;
-  --chart-2: 215 25% 40%;
+  --chart-1: 40 68% 48%;
+  --chart-2: 349 70% 32%;
   --chart-3: 40 45% 65%;
-  --chart-4: 220 30% 35%;
-  --chart-5: 30 50% 55%;
+  --chart-4: 220 25% 35%;
+  --chart-5: 30 55% 52%;
 
   /* ---- Typography ---- */
   --font-sans: 'DM Sans', sans-serif;
@@ -81,15 +83,15 @@
   --font-mono: Menlo, monospace;
   --radius: 0.5rem;
 
-  /* ---- Shadows (gold-tinted) ---- */
-  --shadow-2xs: 0px 2px 4px 0px hsl(43 55% 52% / 0.05);
-  --shadow-xs: 0px 2px 4px 0px hsl(43 55% 52% / 0.08);
-  --shadow-sm: 0px 2px 8px 0px hsl(43 55% 52% / 0.08), 0px 1px 2px -1px hsl(43 55% 52% / 0.05);
-  --shadow: 0px 4px 12px 0px hsl(43 55% 52% / 0.10), 0px 2px 4px -1px hsl(43 55% 52% / 0.06);
-  --shadow-md: 0px 6px 16px 0px hsl(43 55% 52% / 0.12), 0px 2px 4px -1px hsl(43 55% 52% / 0.08);
-  --shadow-lg: 0px 10px 24px 0px hsl(43 55% 52% / 0.15), 0px 4px 8px -2px hsl(43 55% 52% / 0.10);
-  --shadow-xl: 0px 16px 32px 0px hsl(43 55% 52% / 0.18), 0px 8px 12px -4px hsl(43 55% 52% / 0.12);
-  --shadow-2xl: 0px 24px 48px 0px hsl(43 55% 52% / 0.20);
+  /* ---- Shadows — gold-tinted depth ---- */
+  --shadow-2xs: 0px 2px 4px 0px hsl(40 68% 48% / 0.06);
+  --shadow-xs:  0px 2px 6px 0px hsl(40 68% 48% / 0.08);
+  --shadow-sm:  0px 2px 10px 0px hsl(40 68% 48% / 0.09), 0px 1px 2px -1px hsl(0 0% 0% / 0.3);
+  --shadow:     0px 4px 14px 0px hsl(40 68% 48% / 0.10), 0px 2px 4px -1px hsl(0 0% 0% / 0.4);
+  --shadow-md:  0px 6px 18px 0px hsl(40 68% 48% / 0.12), 0px 3px 6px -2px hsl(0 0% 0% / 0.4);
+  --shadow-lg:  0px 10px 28px 0px hsl(40 68% 48% / 0.16), 0px 4px 10px -3px hsl(0 0% 0% / 0.5);
+  --shadow-xl:  0px 16px 36px 0px hsl(40 68% 48% / 0.20), 0px 8px 14px -4px hsl(0 0% 0% / 0.5);
+  --shadow-2xl: 0px 24px 48px 0px hsl(40 68% 48% / 0.22);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
@@ -110,57 +112,55 @@
   --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
 }
 
-/* Dark mode = same as root since site is dark-first */
+/* Dark variant — mirrors root since site is permanently dark */
 .dark {
-  --button-outline: rgba(201, 168, 76, 0.25);
-  --badge-outline: rgba(201, 168, 76, 0.15);
+  --button-outline: rgba(201, 150, 42, 0.30);
+  --badge-outline: rgba(201, 150, 42, 0.15);
   --opaque-button-border-intensity: 9;
-  --elevate-1: rgba(201, 168, 76, 0.06);
-  --elevate-2: rgba(201, 168, 76, 0.12);
-
-  --background: 220 15% 8%;
-  --foreground: 40 20% 92%;
-  --border: 215 20% 18%;
-  --card: 215 25% 12%;
-  --card-foreground: 40 20% 92%;
-  --card-border: 215 20% 20%;
-  --sidebar: 220 18% 7%;
-  --sidebar-foreground: 40 20% 85%;
-  --sidebar-border: 215 20% 16%;
-  --sidebar-primary: 43 55% 52%;
-  --sidebar-primary-foreground: 220 15% 8%;
-  --sidebar-accent: 215 25% 18%;
-  --sidebar-accent-foreground: 40 20% 92%;
-  --sidebar-ring: 43 55% 52%;
-  --popover: 215 25% 12%;
-  --popover-foreground: 40 20% 92%;
-  --popover-border: 215 20% 20%;
-  --primary: 43 55% 52%;
-  --primary-foreground: 220 15% 8%;
-  --secondary: 215 20% 16%;
+  --elevate-1: rgba(201, 150, 42, 0.06);
+  --elevate-2: rgba(201, 150, 42, 0.13);
+  --background: 220 12% 8%;
+  --foreground: 40 25% 93%;
+  --border: 220 12% 18%;
+  --card: 220 14% 12%;
+  --card-foreground: 40 25% 93%;
+  --card-border: 220 12% 20%;
+  --sidebar: 220 14% 7%;
+  --sidebar-foreground: 40 20% 88%;
+  --sidebar-border: 220 12% 16%;
+  --sidebar-primary: 40 68% 48%;
+  --sidebar-primary-foreground: 220 12% 8%;
+  --sidebar-accent: 220 14% 16%;
+  --sidebar-accent-foreground: 40 25% 93%;
+  --sidebar-ring: 40 68% 48%;
+  --popover: 220 14% 12%;
+  --popover-foreground: 40 25% 93%;
+  --popover-border: 220 12% 20%;
+  --primary: 40 68% 48%;
+  --primary-foreground: 220 15% 6%;
+  --secondary: 220 14% 16%;
   --secondary-foreground: 40 20% 88%;
-  --muted: 215 20% 15%;
-  --muted-foreground: 215 12% 60%;
-  --accent: 43 55% 52%;
-  --accent-foreground: 220 15% 8%;
-  --destructive: 0 72% 58%;
-  --destructive-foreground: 40 20% 95%;
-  --input: 215 20% 22%;
-  --ring: 43 55% 52%;
-  --chart-1: 43 55% 52%;
-  --chart-2: 215 25% 40%;
+  --muted: 220 12% 15%;
+  --muted-foreground: 220 10% 58%;
+  --accent: 40 68% 48%;
+  --accent-foreground: 220 15% 6%;
+  --destructive: 0 72% 55%;
+  --destructive-foreground: 40 25% 95%;
+  --input: 220 12% 22%;
+  --ring: 40 68% 48%;
+  --chart-1: 40 68% 48%;
+  --chart-2: 349 70% 32%;
   --chart-3: 40 45% 65%;
-  --chart-4: 220 30% 35%;
-  --chart-5: 30 50% 55%;
-
-  --shadow-2xs: 0px 2px 4px 0px hsl(43 55% 52% / 0.05);
-  --shadow-xs: 0px 2px 4px 0px hsl(43 55% 52% / 0.08);
-  --shadow-sm: 0px 2px 8px 0px hsl(43 55% 52% / 0.08), 0px 1px 2px -1px hsl(43 55% 52% / 0.05);
-  --shadow: 0px 4px 12px 0px hsl(43 55% 52% / 0.10), 0px 2px 4px -1px hsl(43 55% 52% / 0.06);
-  --shadow-md: 0px 6px 16px 0px hsl(43 55% 52% / 0.12), 0px 2px 4px -1px hsl(43 55% 52% / 0.08);
-  --shadow-lg: 0px 10px 24px 0px hsl(43 55% 52% / 0.15), 0px 4px 8px -2px hsl(43 55% 52% / 0.10);
-  --shadow-xl: 0px 16px 32px 0px hsl(43 55% 52% / 0.18), 0px 8px 12px -4px hsl(43 55% 52% / 0.12);
-  --shadow-2xl: 0px 24px 48px 0px hsl(43 55% 52% / 0.20);
+  --chart-4: 220 25% 35%;
+  --chart-5: 30 55% 52%;
+  --shadow-2xs: 0px 2px 4px 0px hsl(40 68% 48% / 0.06);
+  --shadow-xs:  0px 2px 6px 0px hsl(40 68% 48% / 0.08);
+  --shadow-sm:  0px 2px 10px 0px hsl(40 68% 48% / 0.09), 0px 1px 2px -1px hsl(0 0% 0% / 0.3);
+  --shadow:     0px 4px 14px 0px hsl(40 68% 48% / 0.10), 0px 2px 4px -1px hsl(0 0% 0% / 0.4);
+  --shadow-md:  0px 6px 18px 0px hsl(40 68% 48% / 0.12), 0px 3px 6px -2px hsl(0 0% 0% / 0.4);
+  --shadow-lg:  0px 10px 28px 0px hsl(40 68% 48% / 0.16), 0px 4px 10px -3px hsl(0 0% 0% / 0.5);
+  --shadow-xl:  0px 16px 36px 0px hsl(40 68% 48% / 0.20), 0px 8px 14px -4px hsl(0 0% 0% / 0.5);
+  --shadow-2xl: 0px 24px 48px 0px hsl(40 68% 48% / 0.22);
 }
 
 @layer base {
@@ -179,12 +179,10 @@
 }
 
 @layer utilities {
-  /* Hide search cancel button in Chrome */
   input[type="search"]::-webkit-search-cancel-button {
     @apply hidden;
   }
 
-  /* Placeholder styling for contentEditable */
   [contenteditable][data-placeholder]:empty::before {
     content: attr(data-placeholder);
     color: hsl(var(--muted-foreground));
@@ -194,25 +192,36 @@
   .no-default-hover-elevate {}
   .no-default-active-elevate {}
 
-  /* Gold gradient text */
+  /* ---- Exact brand gold gradient text ---- */
   .gold-gradient-text {
-    background: linear-gradient(135deg, #C9A84C 0%, #E5C77A 50%, #B8973A 100%);
+    background: linear-gradient(135deg, #D4A843 0%, #F0C95A 45%, #C9962A 80%, #B8851E 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* Premium hover glow for cards */
+  /* ---- Premium card hover — gold glow matching brand ---- */
   .hover-glow {
     transition: all 0.3s ease;
   }
   .hover-glow:hover {
-    border-color: hsl(43 55% 52% / 0.5) !important;
-    box-shadow: 0 0 24px hsl(43 55% 52% / 0.15), 0 8px 24px rgba(0,0,0,0.3);
-    transform: translateY(-3px);
+    border-color: rgba(201, 150, 42, 0.55) !important;
+    box-shadow: 0 0 28px rgba(201, 150, 42, 0.18), 0 8px 32px rgba(0, 0, 0, 0.45);
+    transform: translateY(-4px);
   }
 
-  /* Toggle elevate system */
+  /* ---- Gold decorative divider ---- */
+  .gold-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #C9962A 35%, #D4A843 50%, #C9962A 65%, transparent 100%);
+  }
+
+  /* ---- Burgundy badge/accent ---- */
+  .burgundy-accent {
+    color: #8B1A2C;
+  }
+
+  /* ---- Elevate system ---- */
   .toggle-elevate::before,
   .toggle-elevate-2::before {
     content: "";

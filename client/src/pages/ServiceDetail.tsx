@@ -104,10 +104,10 @@ export default function ServiceDetailPage() {
                       Contact Us Now
                     </Button>
                   </Link>
-                  <a href="tel:01325000000" className="block w-full">
+                  <a href="tel:07753351619" className="block w-full">
                     <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 h-14 text-lg font-semibold">
                       <Phone className="w-5 h-5 mr-2" />
-                      01325 000000
+                      07753 351619
                     </Button>
                   </a>
                 </div>
