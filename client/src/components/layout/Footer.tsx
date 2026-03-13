@@ -148,7 +148,11 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-border/40 pt-8 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
           <p>Copyright © {currentYear} PropertyShield UK Ltd. All rights reserved.</p>
-          <p className="text-primary/70">Roofing &amp; Pressure Washing Services — Darlington</p>
+          <div className="flex items-center gap-4">
+            <Link href="/terms" className="hover:text-primary transition-colors">Terms &amp; Conditions</Link>
+            <span className="text-primary/40">|</span>
+            <span className="text-primary/70">Roofing &amp; Pressure Washing Services — Darlington</span>
+          </div>
         </div>
       </div>
     </footer>

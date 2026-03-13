@@ -14,6 +14,7 @@ import GalleryPage from "@/pages/Gallery";
 import ReviewsPage from "@/pages/Reviews";
 import AreasPage from "@/pages/Areas";
 import ContactPage from "@/pages/Contact";
+import TermsPage from "@/pages/Terms";
 
 function Router() {
   return (
@@ -27,6 +28,7 @@ function Router() {
         <Route path="/reviews" component={ReviewsPage} />
         <Route path="/areas" component={AreasPage} />
         <Route path="/contact" component={ContactPage} />
+        <Route path="/terms" component={TermsPage} />
         
         {/* Fallback to 404 */}
         <Route component={NotFound} />
