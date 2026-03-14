@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 
 export default function AboutPage() {
   const values = [
-    { icon: Award, title: "Quality First", desc: "We use only premium materials and proven techniques." },
-    { icon: Shield, title: "Trust & Integrity", desc: "Honest quotes, clear communication, and no hidden costs." },
-    { icon: Users, title: "Customer Focus", desc: "Your satisfaction is the ultimate measure of our success." },
-    { icon: Target, title: "Precision", desc: "Meticulous attention to detail in every repair and installation." },
+    { icon: Award, title: "Quality First", desc: "We use only premium materials and proven techniques. We take pride in delivering exceptional results on every project, big or small." },
+    { icon: Shield, title: "Trust & Integrity", desc: "Honest quotes, clear communication, and no hidden costs. We take pride in delivering exceptional results on every project, big or small." },
+    { icon: Users, title: "Customer Focus", desc: "Your satisfaction is the ultimate measure of our success. We take pride in delivering exceptional results on every project, big or small." },
+    { icon: Target, title: "Precision", desc: "Meticulous attention to detail in every repair and installation. We take pride in delivering exceptional results on every project, big or small." },
   ];
 
   return (

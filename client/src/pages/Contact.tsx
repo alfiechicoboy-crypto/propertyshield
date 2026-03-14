@@ -21,7 +21,7 @@ export default function ContactPage() {
     defaultValues: {
       fullName: "",
       phone: "",
-      email: "",
+      email: "propertyshield128@gmail.com",
       propertyAddress: "",
       serviceRequired: "",
       isEmergency: false,

@@ -9,24 +9,24 @@ export default function ServicesPage() {
     {
       title: "Roofing & Re-Roofing",
       items: [
-        { name: "Re-Roofing", path: "/services/re-roofing", icon: Home, desc: "Full roof replacements with premium materials." },
-        { name: "Flat Roofing", path: "/services/flat-roofing", icon: Layers, desc: "EPDM, GRP and traditional felt flat roofs." },
-        { name: "Tile & Slate Replacement", path: "/services/tile-slate-replacement", icon: Home, desc: "Sourcing and fitting matching tiles." },
+        { name: "Re-Roofing", path: "/services/re-roofing", icon: Home, desc: "Full roof replacements with premium materials. We take pride in delivering exceptional results on every project, big or small." },
+        { name: "Flat Roofing", path: "/services/flat-roofing", icon: Layers, desc: "EPDM, GRP and traditional felt flat roofs. We take pride in delivering exceptional results on every project, big or small." },
+        { name: "Tile & Slate Replacement", path: "/services/tile-slate-replacement", icon: Home, desc: "Sourcing and fitting matching tiles. We take pride in delivering exceptional results on every project, big or small." },
       ]
     },
     {
       title: "Repairs & Maintenance",
       items: [
-        { name: "Roof Repairs", path: "/services/roof-repairs", icon: Wrench, desc: "Leak detection and lasting structural repairs." },
-        { name: "Chimney Repairs", path: "/services/chimney-repairs", icon: Home, desc: "Repointing, lead flashing, and structural fixes." },
-        { name: "Roof Cleaning", path: "/services/roof-cleaning", icon: Sparkles, desc: "Moss removal to extend the lifespan of your roof." },
+        { name: "Roof Repairs", path: "/services/roof-repairs", icon: Wrench, desc: "Leak detection and lasting structural repairs. We take pride in delivering exceptional results on every project, big or small." },
+        { name: "Chimney Repairs", path: "/services/chimney-repairs", icon: Home, desc: "Repointing, lead flashing, and structural fixes. We take pride in delivering exceptional results on every project, big or small." },
+        { name: "Roof Cleaning", path: "/services/roof-cleaning", icon: Sparkles, desc: "Moss removal to extend the lifespan of your roof. We take pride in delivering exceptional results on every project, big or small." },
       ]
     },
     {
       title: "Specialist Services",
       items: [
-        { name: "Fascias & Guttering", path: "/services/fascias-soffits-guttering", icon: Droplets, desc: "UPVC roofline installations and repairs." },
-        { name: "Emergency Roofing", path: "/services/emergency-roofing", icon: AlertTriangle, desc: "24/7 rapid response for storm damage." },
+        { name: "Fascias & Guttering", path: "/services/fascias-soffits-guttering", icon: Droplets, desc: "UPVC roofline installations and repairs. We take pride in delivering exceptional results on every project, big or small." },
+        { name: "Emergency Roofing", path: "/services/emergency-roofing", icon: AlertTriangle, desc: "24/7 rapid response for storm damage. We take pride in delivering exceptional results on every project, big or small." },
       ]
     }
   ];

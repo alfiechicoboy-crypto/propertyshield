@@ -177,12 +177,12 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: Award, title: "Skilled Workmanship" },
-              { icon: Shield, title: "Honest Pricing" },
-              { icon: Zap, title: "Fast Response" },
-              { icon: ShieldCheck, title: "Professional Standards" },
-              { icon: Clock, title: "Built to Last" },
-              { icon: Star, title: "Customer Satisfaction" }
+              { icon: Award, title: "Skilled Workmanship", desc: "We take pride in delivering exceptional results on every project, big or small." },
+              { icon: Shield, title: "Honest Pricing", desc: "We take pride in delivering exceptional results on every project, big or small." },
+              { icon: Zap, title: "Fast Response", desc: "We take pride in delivering exceptional results on every project, big or small." },
+              { icon: ShieldCheck, title: "Professional Standards", desc: "We take pride in delivering exceptional results on every project, big or small." },
+              { icon: Clock, title: "Built to Last", desc: "We take pride in delivering exceptional results on every project, big or small." },
+              { icon: Star, title: "Customer Satisfaction", desc: "We take pride in delivering exceptional results on every project, big or small." }
             ].map((item, i) => (
               <motion.div 
                 key={i} 
@@ -197,7 +197,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">We take pride in delivering exceptional results on every project, big or small.</p>
+                  <p className="text-muted-foreground text-sm">{item.desc}</p>
                 </div>
               </motion.div>
             ))}

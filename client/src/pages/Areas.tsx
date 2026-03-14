@@ -42,7 +42,7 @@ export default function AreasPage() {
           <div className="bg-card p-10 md:p-16 rounded-2xl border border-border max-w-4xl mx-auto text-center shadow-xl">
             <h2 className="font-serif text-3xl font-bold text-foreground mb-6">Need a Roofer in Your Area?</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Based in Darlington, we provide roofing services across Darlington and all surrounding towns within a 40+ mile radius. If your area isn't listed, just ask—our team covers County Durham, Teesside, North Yorkshire, and more. Contact us to confirm coverage and arrange a free quote.
+              Based in Darlington, we provide roofing services across Darlington and all surrounding towns within a 40 mile radius. If your area isn't listed, just ask—our team covers County Durham, Teesside, North Yorkshire, and more. Contact us to confirm coverage and arrange a free quote.
             </p>
             <p className="text-sm text-muted-foreground">
               SEO Keywords: roofing company Darlington, roof repairs Darlington, re-roofing Darlington, emergency roofer Darlington, chimney repairs Darlington, roofers Newton Aycliffe, roofers Bishop Auckland, roofers Stockton, roofers Middlesbrough, roofers Durham, roofers Yarm, roofers Redcar, roofers Hartlepool, roofers Northallerton.

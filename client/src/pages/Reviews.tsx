@@ -30,6 +30,13 @@ export default function ReviewsPage() {
             <p className="text-muted-foreground">Based on verified customer reviews</p>
           </div>
 
+          {/* Checkatrade Widget Embed */}
+          <div className="my-12 flex justify-center">
+            <div id="checkatrade-widget" style={{ width: '100%', maxWidth: 600 }}></div>
+          </div>
+          <script dangerouslySetInnerHTML={{ __html: `window._checkatradeConfig = {"companyId":9719450,"uniqueName":"PROPERTYSHIELDUKLTD","theme":"red"};` }} />
+          <script src="https://www.checkatrade.com/static/js/widget.js"></script>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {reviews.map((review, i) => (
               <motion.div 
