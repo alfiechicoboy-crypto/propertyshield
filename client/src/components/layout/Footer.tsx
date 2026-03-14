@@ -120,13 +120,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@propertyshielduk.co.uk" className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors group">
+                <a href="mailto:propertyshield128@gmail.com" className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors group">
                   <div className="w-9 h-9 rounded-full bg-card border border-border flex items-center justify-center shrink-0 group-hover:border-primary transition-colors">
                     <Mail className="w-4 h-4 text-primary" />
                   </div>
                   <div className="flex flex-col pt-0.5">
                     <span className="text-xs font-semibold text-foreground uppercase tracking-wider mb-0.5">Email Us</span>
-                    <span className="text-sm break-all">info@propertyshielduk.co.uk</span>
+                    <span className="text-sm break-all">propertyshield128@gmail.com</span>
                   </div>
                 </a>
               </li>
@@ -152,6 +152,14 @@ export function Footer() {
             <Link href="/terms" className="hover:text-primary transition-colors">Terms &amp; Conditions</Link>
             <span className="text-primary/40">|</span>
             <span className="text-primary/70">Roofing &amp; Pressure Washing Services — Darlington</span>
+          </div>
+          {/* Legal & Trust Badges */}
+          <div className="flex flex-wrap items-center gap-4 mt-2 md:mt-0">
+            <span className="bg-primary/10 px-2 py-1 rounded font-semibold text-primary/80">Company No: 15707554</span>
+            <span className="bg-primary/10 px-2 py-1 rounded font-semibold text-primary/80">Fully Insured</span>
+            <span className="bg-primary/10 px-2 py-1 rounded font-semibold text-primary/80">Checkatrade Rated: 9.44/10</span>
+            <span className="bg-primary/10 px-2 py-1 rounded font-semibold text-primary/80">Family-run Business</span>
+            <span className="bg-primary/10 px-2 py-1 rounded font-semibold text-primary/80">Not affiliated with PropertyShield Ltd (Preston) or Shield AI UK Ltd</span>
           </div>
         </div>
       </div>

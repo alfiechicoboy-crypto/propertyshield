@@ -78,7 +78,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-foreground">Email</h3>
-                    <a href="mailto:info@propertyshielduk.co.uk" className="text-muted-foreground hover:text-primary transition-colors">info@propertyshielduk.co.uk</a>
+                    <a href="mailto:propertyshield128@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">propertyshield128@gmail.com</a>
                   </div>
                 </div>
 
