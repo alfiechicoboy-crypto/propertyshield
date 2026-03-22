@@ -32,6 +32,26 @@ app.use((req, res, next) => {
   next();
 });
 
+const legacyRedirects: Record<string, string> = {
+  "/about-us": "/about",
+  "/contact-us": "/contact",
+  "/portfolio-projects": "/gallery",
+  "/faq": "/terms",
+  "/legal-notice": "/terms",
+  "/contact-us/privacy-policy": "/terms",
+};
+
+app.use((req, res, next) => {
+  const redirectPath = legacyRedirects[req.path];
+
+  if (!redirectPath) {
+    return next();
+  }
+
+  const search = req.url.includes("?") ? req.url.slice(req.url.indexOf("?")) : "";
+  return res.redirect(301, `${redirectPath}${search}`);
+});
+
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
     hour: "numeric",
