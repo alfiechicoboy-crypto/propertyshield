@@ -16,6 +16,8 @@ import ReviewsPage from "@/pages/Reviews";
 import AreasPage from "@/pages/Areas";
 import ContactPage from "@/pages/Contact";
 import TermsPage from "@/pages/Terms";
+import PrivacyPage from "@/pages/Privacy";
+import { serviceSeoEntries } from "@/lib/service-seo";
 
 const SITE_URL = "https://propertyshielduk.com";
 
@@ -94,6 +96,12 @@ const seoByPath: Record<string, SeoEntry> = {
       "Read PropertyShield UK Ltd terms, legal information, and service conditions for roofing works in Darlington and surrounding areas.",
     canonicalPath: "/terms",
   },
+  "/privacy": {
+    title: "Privacy Policy | PropertyShield UK Ltd",
+    description:
+      "Read the PropertyShield UK Ltd privacy policy covering website enquiries, analytics consent, and personal data handling.",
+    canonicalPath: "/privacy",
+  },
   "/faq": {
     title: "Terms & Legal Information | PropertyShield UK Ltd",
     description:
@@ -107,12 +115,33 @@ const seoByPath: Record<string, SeoEntry> = {
     canonicalPath: "/terms",
   },
   "/contact-us/privacy-policy": {
-    title: "Terms & Legal Information | PropertyShield UK Ltd",
+    title: "Privacy Policy | PropertyShield UK Ltd",
     description:
-      "Read PropertyShield UK Ltd terms, legal information, and service conditions for roofing works in Darlington and surrounding areas.",
-    canonicalPath: "/terms",
+      "Read the PropertyShield UK Ltd privacy policy covering website enquiries, analytics consent, and personal data handling.",
+    canonicalPath: "/privacy",
   },
 };
+
+function getSeoForPath(pathname: string): SeoEntry {
+  if (seoByPath[pathname]) {
+    return seoByPath[pathname];
+  }
+
+  if (pathname.startsWith("/services/")) {
+    const slug = pathname.replace("/services/", "");
+    const service = serviceSeoEntries[slug];
+
+    if (service) {
+      return {
+        title: service.metaTitle,
+        description: service.metaDescription,
+        canonicalPath: `/services/${service.slug}`,
+      };
+    }
+  }
+
+  return defaultSeo;
+}
 
 function upsertMeta(
   attributeName: "name" | "property",
@@ -136,7 +165,7 @@ function Router() {
 
   useEffect(() => {
     const pathname = location.split("?")[0]?.split("#")[0] || "/";
-    const seo = seoByPath[pathname] ?? defaultSeo;
+    const seo = getSeoForPath(pathname);
     const canonicalUrl = `${SITE_URL}${seo.canonicalPath}`;
 
     document.title = seo.title;
@@ -177,9 +206,10 @@ function Router() {
         <Route path="/contact" component={ContactPage} />
         <Route path="/contact-us" component={ContactPage} />
         <Route path="/terms" component={TermsPage} />
+        <Route path="/privacy" component={PrivacyPage} />
         <Route path="/faq" component={TermsPage} />
         <Route path="/legal-notice" component={TermsPage} />
-        <Route path="/contact-us/privacy-policy" component={TermsPage} />
+        <Route path="/contact-us/privacy-policy" component={PrivacyPage} />
         
         {/* Fallback to 404 */}
         <Route component={NotFound} />

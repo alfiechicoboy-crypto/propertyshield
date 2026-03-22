@@ -2,61 +2,11 @@ import { useParams, Link } from "wouter";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { CheckCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const serviceContent: Record<string, any> = {
-  "roof-repairs": {
-    title: "Roof Repairs in Darlington",
-    desc: "Expert fault finding and durable repair solutions to protect your property from water damage.",
-    bullets: ["Leak detection & isolation", "Ridge tile rebedding & repointing", "Lead valley repairs", "Storm damage repair"],
-    why: "A small leak can quickly become a major structural issue. We respond fast and fix it right the first time."
-  },
-  "re-roofing": {
-    title: "Re-Roofing Specialists",
-    desc: "Complete roof replacements using premium materials, installed to the highest industry standards.",
-    bullets: ["Full strip and re-tile/slate", "Breathable membrane installation", "Treated timber battens", "Insurance backed guarantees"],
-    why: "A new roof is a major investment. We ensure yours is built to last for generations, adding significant value to your property."
-  },
-  "tile-slate-replacement": {
-    title: "Tile & Slate Replacement",
-    desc: "Seamless replacement of broken, slipped, or missing tiles to restore your roof's integrity.",
-    bullets: ["Colour & profile matching", "Slate repairs", "Concrete & clay tile replacements", "Ridge and hip tile repairs"],
-    why: "Missing tiles compromise your roof's waterproofing. We source matching materials to ensure an invisible repair."
-  },
-  "chimney-repairs": {
-    title: "Chimney Repairs & Repointing",
-    desc: "Comprehensive chimney maintenance to prevent damp ingress and structural failure.",
-    bullets: ["Brickwork repointing", "Lead flashing replacement", "Chimney pot securing", "Complete chimney rebuilds"],
-    why: "Chimneys bear the brunt of the weather. Our specialized repairs keep them secure and watertight."
-  },
-  "fascias-soffits-guttering": {
-    title: "Fascias, Soffits & Guttering",
-    desc: "High-quality UPVC roofline installations to improve drainage and property aesthetics.",
-    bullets: ["Full UPVC replacements", "Gutter clearing & repairs", "Dry verge systems", "Cladding installations"],
-    why: "A failing roofline causes damp walls. Our modern UPVC solutions are maintenance-free and look fantastic."
-  },
-  "flat-roofing": {
-    title: "Flat Roofing Services",
-    desc: "Durable, waterproof flat roofing solutions for garages, extensions, and commercial properties.",
-    bullets: ["EPDM Rubber roofing", "GRP Fibreglass", "Traditional felt systems", "Flat roof repairs"],
-    why: "Flat roofs require specialist knowledge. We install seamless systems designed to withstand pooling water."
-  },
-  "roof-cleaning": {
-    title: "Roof Cleaning & Moss Removal",
-    desc: "Professional cleaning to remove damaging moss, algae, and lichen without harming your tiles.",
-    bullets: ["Manual moss scraping", "Biocide soft washing", "Gutter clearing", "Tile protection treatments"],
-    why: "Moss retains moisture and damages tiles. Our gentle cleaning methods restore your roof safely."
-  },
-  "emergency-roofing": {
-    title: "Emergency Roof Repairs",
-    desc: "24/7 rapid response for critical roof failures, severe leaks, and storm damage across Darlington.",
-    bullets: ["Temporary weatherproofing", "Storm damage assessment", "Make-safe repairs", "Insurance reports"],
-    why: "When disaster strikes, you need a team you can trust immediately. We are available around the clock."
-  }
-};
+import { serviceSeoEntries } from "@/lib/service-seo";
 
 export default function ServiceDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const data = serviceContent[id || ""];
+  const data = serviceSeoEntries[id || ""];
 
   if (!data) {
     return (
@@ -73,10 +23,39 @@ export default function ServiceDetailPage() {
 
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex items-center gap-2 text-sm text-muted-foreground">
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/services" className="hover:text-primary transition-colors">Services</Link>
+            <span>/</span>
+            <span className="text-foreground">{data.shortTitle}</span>
+          </div>
+
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Service",
+                serviceType: data.shortTitle,
+                name: `${data.shortTitle} | PropertyShield UK Ltd`,
+                description: data.metaDescription,
+                areaServed: ["Darlington", "County Durham"],
+                provider: {
+                  "@type": "RoofingContractor",
+                  name: "PropertyShield UK Ltd",
+                  url: "https://propertyshielduk.com",
+                  telephone: "+447753351619",
+                },
+                url: `https://propertyshielduk.com/services/${data.slug}`,
+              }),
+            }}
+          />
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
             <div>
-              <h2 className="font-serif text-3xl font-bold text-foreground mb-6">What's Included</h2>
+                <h2 className="font-serif text-3xl font-bold text-foreground mb-6">What's Included</h2>
               <ul className="space-y-4 mb-10">
                 {data.bullets.map((bullet: string, i: number) => (
                   <li key={i} className="flex items-start gap-3">
@@ -87,7 +66,7 @@ export default function ServiceDetailPage() {
               </ul>
 
               <h2 className="font-serif text-3xl font-bold text-foreground mb-6">Why Choose Us?</h2>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 {data.why} Our team at PropertyShield UK Ltd brings years of expertise to every project in Darlington and surrounding areas. We guarantee premium workmanship and long-lasting results.
               </p>
             </div>

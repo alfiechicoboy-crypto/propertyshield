@@ -21,7 +21,7 @@ export default function ContactPage() {
     defaultValues: {
       fullName: "",
       phone: "",
-      email: "propertyshield128@gmail.com",
+      email: "",
       propertyAddress: "",
       serviceRequired: "",
       isEmergency: false,
@@ -201,7 +201,7 @@ export default function ContactPage() {
                           </FormControl>
                           <div className="space-y-1 leading-none">
                             <FormLabel className="text-destructive font-semibold cursor-pointer">Is this an emergency?</FormLabel>
-                            <p className="text-xs text-muted-foreground">Tick if you require urgent assistance.</p>
+                            <p className="text-xs text-muted-foreground">Tick if you require urgent assistance. Emergency enquiries are prioritised for a faster response.</p>
                           </div>
                         </FormItem>
                       )} />

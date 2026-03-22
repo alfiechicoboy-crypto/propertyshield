@@ -17,7 +17,7 @@ export function MainLayout({ children }: { children: ReactNode }) {
       {/* Mobile Sticky CTA */}
       <a 
         href="tel:07753351619" 
-        className="md:hidden fixed bottom-6 right-6 w-14 h-14 bg-primary text-primary-foreground rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(201,168,76,0.4)] z-50 animate-bounce"
+        className="md:hidden fixed bottom-6 right-6 w-14 h-14 bg-primary text-primary-foreground rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(201,168,76,0.4)] z-50 motion-safe:animate-bounce"
       >
         <Phone className="w-6 h-6" />
       </a>

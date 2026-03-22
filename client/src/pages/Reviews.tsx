@@ -26,13 +26,23 @@ export default function ReviewsPage() {
             <div className="flex gap-2 mb-4">
               {[1,2,3,4,5].map(s => <Star key={s} className="w-8 h-8 fill-primary text-primary" />)}
             </div>
-            <h2 className="text-2xl font-bold text-foreground">5.0 Average Rating</h2>
-            <p className="text-muted-foreground">Based on verified customer reviews</p>
+            <h2 className="text-2xl font-bold text-foreground">Customer Feedback and Third-Party Reviews</h2>
+            <p className="text-muted-foreground text-center max-w-2xl">Read examples of customer feedback below and view our third-party review profile on Checkatrade for independent verification.</p>
           </div>
 
           {/* Checkatrade Widget Embed */}
           <div className="my-12 flex justify-center">
             <div id="checkatrade-widget" style={{ width: '100%', maxWidth: 600 }}></div>
+          </div>
+          <div className="mb-12 text-center">
+            <a
+              href="https://www.checkatrade.com/trades/propertyshieldukltd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg border border-primary px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+            >
+              View our Checkatrade profile
+            </a>
           </div>
           <script dangerouslySetInnerHTML={{ __html: `window._checkatradeConfig = {"companyId":9719450,"uniqueName":"PROPERTYSHIELDUKLTD","theme":"red"};` }} />
           <script src="https://www.checkatrade.com/static/js/widget.js"></script>

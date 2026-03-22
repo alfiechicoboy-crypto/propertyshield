@@ -167,6 +167,8 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <Link href="/terms" className="hover:text-primary transition-colors">Terms &amp; Conditions</Link>
             <span className="text-primary/40">|</span>
+            <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <span className="text-primary/40">|</span>
             <span className="text-primary/70">Roofing &amp; Pressure Washing Services — Darlington</span>
           </div>
           {/* Legal & Trust Badges */}

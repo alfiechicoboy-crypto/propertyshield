@@ -38,8 +38,19 @@ const legacyRedirects: Record<string, string> = {
   "/portfolio-projects": "/gallery",
   "/faq": "/terms",
   "/legal-notice": "/terms",
-  "/contact-us/privacy-policy": "/terms",
+  "/contact-us/privacy-policy": "/privacy",
 };
+
+app.use((_, res, next) => {
+  res.setHeader("X-Frame-Options", "SAMEORIGIN");
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+  res.setHeader(
+    "Content-Security-Policy",
+    "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.checkatrade.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self';",
+  );
+  next();
+});
 
 app.use((req, res, next) => {
   const redirectPath = legacyRedirects[req.path];
