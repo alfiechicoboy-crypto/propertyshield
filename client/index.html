@@ -34,10 +34,28 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6CB3ZYQ9M"></script>
     <script>
+      var propertyShieldConsent = localStorage.getItem('ps_cookie_consent');
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      if (propertyShieldConsent === 'accepted') {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied'
+        });
+      }
       gtag('js', new Date());
-      gtag('config', 'G-M6CB3ZYQ9M');
+      gtag('config', 'G-M6CB3ZYQ9M', { anonymize_ip: true });
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

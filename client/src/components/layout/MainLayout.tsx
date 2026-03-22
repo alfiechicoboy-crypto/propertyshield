@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { Phone } from "lucide-react";
+import { CookieConsentBanner } from "@/components/ui/CookieConsentBanner";
 
 export function MainLayout({ children }: { children: ReactNode }) {
   return (
@@ -11,6 +12,7 @@ export function MainLayout({ children }: { children: ReactNode }) {
         {children}
       </main>
       <Footer />
+      <CookieConsentBanner />
       
       {/* Mobile Sticky CTA */}
       <a 

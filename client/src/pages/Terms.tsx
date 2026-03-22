@@ -214,6 +214,16 @@ const sections = [
       "Acceptance of the quotation, payment of deposit, or instruction to commence work constitutes full acceptance of these Terms & Conditions.",
     ],
   },
+  {
+    number: "26",
+    title: "Cookies & Analytics",
+    content: [
+      "This website uses essential technical storage for security, site functionality, and saving cookie preferences.",
+      "With consent, PropertyShield UK Ltd uses Google Analytics to measure website traffic, understand page usage, and improve website performance.",
+      "Analytics cookies are optional and can be accepted or rejected through the cookie banner or updated later using the cookie settings control shown on the website.",
+      "Google Analytics data is used in aggregate reporting and website performance analysis only. PropertyShield UK Ltd does not intentionally use analytics tools to collect sensitive personal information.",
+    ],
+  },
 ];
 
 export default function TermsPage() {
