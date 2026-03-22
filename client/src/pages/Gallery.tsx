@@ -17,6 +17,11 @@ const photos = [
   { src: "/gallery/IMG_0155_1773414857397.jpg",  label: "Slate Roof Restoration",           location: "Darlington" },
   { src: "/gallery/IMG_0295_1773414857397.jpg",  label: "Roof Repair & Pointing",           location: "Ferryhill" },
   { src: "/gallery/IMG_0441_1773414857397.jpg",  label: "Chimney Stack Rebuild",            location: "Darlington" },
+  { src: "/gallery/IMG_1133_1774219279933.png",  label: "Existing Roof Before Works",       location: "Sunderland" },
+  { src: "/gallery/IMG_1134_1774219279933.png",  label: "Scaffolding & Strip Out",          location: "Sunderland" },
+  { src: "/gallery/IMG_1135_1774219279933.png",  label: "Full Re-Roof Completed",           location: "Sunderland" },
+  { src: "/gallery/IMG_1136_1774219279933.png",  label: "New Ridge & Hip Tiles",            location: "Sunderland" },
+  { src: "/gallery/IMG_1137_1774219279934.png",  label: "New Slate Tile Installation",      location: "Sunderland" },
 ];
 
 export default function GalleryPage() {
