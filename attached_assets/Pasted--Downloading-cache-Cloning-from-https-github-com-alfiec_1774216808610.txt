@@ -1,0 +1,50 @@
+==> Downloading cache...
+==> Cloning from https://github.com/alfiechicoboy-crypto/propertyshield
+==> Checking out commit f746aea2fe8cc142f1b331840b124cb318d445fe in branch master
+==> Downloaded 200MB in 4s. Extraction took 4s.
+==> Using Node.js version 22.22.0 (default)
+==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+==> Running build command 'npm install --include=dev && npm run build'...
+up to date, audited 480 packages in 1s
+77 packages are looking for funding
+  run `npm fund` for details
+4 vulnerabilities (1 low, 1 moderate, 2 high)
+To address all issues, run:
+  npm audit fix
+Run `npm audit` for details.
+> rest-express@1.0.0 build
+> tsx script/build.ts
+building client...
+vite v7.3.0 building client environment for production...
+transforming...
+A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+✓ 2180 modules transformed.
+rendering chunks...
+computing gzip size...
+../dist/public/index.html                   9.22 kB │ gzip:   2.64 kB
+../dist/public/assets/index-t0VqRnQY.css   82.22 kB │ gzip:  13.36 kB
+../dist/public/assets/index-CAl8VBV1.js   647.79 kB │ gzip: 198.55 kB
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 4.92s
+building server...
+  dist/index.cjs  1.0mb ⚠️
+⚡ Done in 303ms
+==> Uploading build...
+==> Uploaded in 7.6s. Compression took 3.5s
+==> Build successful 🎉
+==> Deploying...
+==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+==> Running 'npm start'
+> rest-express@1.0.0 start
+> cross-env NODE_ENV=production node dist/index.cjs
+9:59:28 PM [express] serving on port 10000
+==> Your service is live 🎉
+==> 
+==> ///////////////////////////////////////////////////////////
+==> 
+==> Available at your primary URL https://propertyshielduk.com + 2 more domains
+==> 
+==> ///////////////////////////////////////////////////////////
