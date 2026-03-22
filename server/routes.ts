@@ -3,6 +3,7 @@ import type { Server } from "http";
 import { storage } from "./storage";
 import { api } from "@shared/routes";
 import { z } from "zod";
+import { sendEnquiryNotificationToOwner, sendConfirmationToCustomer } from "./email";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -16,6 +17,13 @@ export async function registerRoutes(
     try {
       const input = api.enquiries.create.input.parse(req.body);
       const enquiry = await storage.createEnquiry(input);
+
+      // Send emails in background — don't let email failure break the response
+      Promise.all([
+        sendEnquiryNotificationToOwner(enquiry),
+        sendConfirmationToCustomer(enquiry),
+      ]).catch((err) => console.error("Error sending enquiry emails:", err));
+
       res.status(201).json({
         id: enquiry.id,
         message: "Thank you for your enquiry. We will be in touch shortly.",

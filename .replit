@@ -56,3 +56,8 @@ waitForPort = 5000
 
 [agent]
 expertMode = true
+
+[userenv]
+
+[userenv.shared]
+GMAIL_USER = "propertyshield128@gmail.com"
