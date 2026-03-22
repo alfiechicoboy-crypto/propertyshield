@@ -1,0 +1,67 @@
+  line: '1466',
+  routine: 'parserOpenTable'
+Menu
+}
+10:00:12 PM [express] POST /api/enquiries 500 in 23ms :: {"message":"Internal server error"}
+[POST]
+propertyshielduk.com/api/enquiries clientIP="82.132.232.91" requestID="706285d8-8615-40a9" responseTimeMS=29 responseBytes=850 userAgent="Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Mobile/15E148 Safari/604.1"
+[POST]
+propertyshielduk.com/api/enquiries clientIP="82.132.232.91" requestID="a809c206-4a59-4eda" responseTimeMS=35 responseBytes=850 userAgent="Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Mobile/15E148 Safari/604.1"
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1466',
+  routine: 'parserOpenTable'
+}
+10:00:35 PM [express] POST /api/enquiries 500 in 31ms :: {"message":"Internal server error"}
+[POST]
+propertyshielduk.com/api/enquiries clientIP="82.132.232.91" requestID="1018d7a6-c6cb-4a0a" responseTimeMS=26 responseBytes=880 userAgent="Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Mobile/15E148 Safari/604.1"
+10:04:34 PM [express] POST /api/enquiries 201 in 22ms :: {"id":1,"message":"Thank you for your enquiry. We will be in touch shortly."}
+==> Detected service running on port 10000
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+[GET]
+propertyshield.onrender.com/services/flat-roofing clientIP="43.153.54.138" requestID="f7ff97ba-7ab9-4a08" responseTimeMS=7 responseBytes=3438 userAgent="Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+[GET]
+propertyshielduk.com/robots.txt clientIP="66.249.69.66" requestID="d0f69251-fd5e-49c0" responseTimeMS=3 responseBytes=966 userAgent="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+[GET]
+propertyshielduk.com/about clientIP="66.249.69.66" requestID="8c4e419a-f1fc-41f3" responseTimeMS=3 responseBytes=3438 userAgent="Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.159 Mobile Safari/537.36 (compatible; GoogleOther)"
+[GET]
+propertyshielduk.com/assets/index-t0VqRnQY.css clientIP="66.249.76.4" requestID="4eced23c-068f-43d9" responseTimeMS=7 responseBytes=14657 userAgent="Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.159 Mobile Safari/537.36 (compatible; GoogleOther)"
+[GET]
+propertyshielduk.com/brand-card.svg clientIP="66.249.76.3" requestID="5bf0f135-a51a-4129" responseTimeMS=5 responseBytes=1725 userAgent="Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.159 Mobile Safari/537.36 (compatible; GoogleOther)"
+[GET]
+propertyshielduk.com/assets/index-CAl8VBV1.js clientIP="66.249.69.65" requestID="4ebcef74-bec0-4483" responseTimeMS=46 responseBytes=200513 userAgent="Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.159 Mobile Safari/537.36 (compatible; GoogleOther)"
+[GET]
+propertyshielduk.com/ clientIP="43.159.152.4" requestID="fb97d693-778d-4ec2" responseTimeMS=5 responseBytes=3438 userAgent="Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+[GET]
+propertyshield.onrender.com/contact clientIP="49.51.50.147" requestID="64547c41-9c37-4907" responseTimeMS=9 responseBytes=3438 userAgent="Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+==> Deploying...
+==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+==> Running 'npm start'
+> rest-express@1.0.0 start
+> cross-env NODE_ENV=production node dist/index.cjs
+10:21:10 PM [express] serving on port 10000
+[GET]
+propertyshield.onrender.com/ clientIP="35.230.45.39" requestID="251b8002-f1e5-4140" responseTimeMS=18 responseBytes=3438 userAgent="Go-http-client/2.0"
+==> Your service is live 🎉
+==> 
+==> ///////////////////////////////////////////////////////////
+==> 
+==> Available at your primary URL https://propertyshielduk.com + 2 more domains
+==> 
+==> ///////////////////////////////////////////////////////////
+[POST]
+propertyshielduk.com/api/enquiries clientIP="31.94.16.198" requestID="07af3a51-dac6-4c20" responseTimeMS=35 responseBytes=881 userAgent="Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Mobile/15E148 Safari/604.1"
+[email] GMAIL_USER or GMAIL_APP_PASSWORD not set — skipping owner notification email.
+[email] GMAIL_USER or GMAIL_APP_PASSWORD not set — skipping customer confirmation email.
+10:22:10 PM [express] POST /api/enquiries 201 in 25ms :: {"id":2,"message":"Thank you for your enquiry. We will be in touch shortly."}
+[POST]
+propertyshielduk.com/api/enquiries clientIP="82.132.232.91" requestID="1949f9c4-9d68-4a8f" responseTimeMS=37 responseBytes=881 userAgent="Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Mobile/15E148 Safari/604.1"
+[email] GMAIL_USER or GMAIL_APP_PASSWORD not set — skipping owner notification email.
+[email] GMAIL_USER or GMAIL_APP_PASSWORD not set — skipping customer confirmation email.
+10:23:15 PM [express] POST /api/enquiries 201 in 35ms :: {"id":3,"message":"Thank you for your enquiry. We will be in touch shortly."}
