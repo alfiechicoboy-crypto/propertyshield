@@ -1,20 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
     <linearGradient id="shieldGold" x1="14" y1="11" x2="50" y2="54" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#E0C56C" />
       <stop offset="0.45" stop-color="#D3A948" />
       <stop offset="1" stop-color="#B8851E" />
     </linearGradient>
-    <filter id="shadow" x="4" y="5" width="56" height="54" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.35" />
-    </filter>
   </defs>
-
-  <circle cx="32" cy="32" r="31" fill="#1B222A" />
-  <g filter="url(#shadow)">
-    <path d="M32 8L53 15.5V34.5C53 45.8 43.4 54.5 32 60C20.6 54.5 11 45.8 11 34.5V15.5L32 8Z" fill="#7E1E2E" />
-    <path d="M32 11.5L49.6 17.7V34.3C49.6 43.8 41.5 51.3 32 56C22.5 51.3 14.4 43.8 14.4 34.3V17.7L32 11.5Z" fill="#FBF7EF" />
-    <path d="M32 14L48 19.6V34.1C48 42.4 40.8 49.2 32 53.7C23.2 49.2 16 42.4 16 34.1V19.6L32 14Z" fill="url(#shieldGold)" />
-    <text x="32" y="41" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#741728">P</text>
-  </g>
+  <!-- Outer dark shield -->
+  <path d="M32 8L53 15.5V34.5C53 45.8 43.4 54.5 32 60C20.6 54.5 11 45.8 11 34.5V15.5L32 8Z" fill="#7E1E2E" />
+  <!-- Cross layer -->
+  <path d="M32 11.5L49.6 17.7V34.3C49.6 43.8 41.5 51.3 32 56C22.5 51.3 14.4 43.8 14.4 34.3V17.7L32 11.5Z" fill="#FBF7EF" />
+  <!-- Gold gradient shield -->
+  <path d="M32 14L48 19.6V34.1C48 42.4 40.8 49.2 32 53.7C23.2 49.2 16 42.4 16 34.1V19.6L32 14Z" fill="url(#shieldGold)" />
+  <!-- P letter -->
+  <text x="32" y="41" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#741728">P</text>
 </svg>
