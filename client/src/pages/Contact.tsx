@@ -98,7 +98,7 @@ export default function ContactPage() {
                   <AlertTriangle className="w-5 h-5" /> Emergency Repairs
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  For storm damage and severe leaks, please call our 24/7 emergency line directly instead of using the form.
+                  For storm damage and severe leaks, please call us directly. We are available Monday to Saturday and closed on Sunday.
                 </p>
               </div>
             </div>

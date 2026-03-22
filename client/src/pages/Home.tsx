@@ -233,8 +233,13 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="relative aspect-square max-w-md mx-auto w-full"
             >
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
-              <Shield className="w-full h-full text-primary drop-shadow-[0_0_30px_rgba(201,168,76,0.3)]" strokeWidth={1} />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-2xl blur-3xl animate-pulse"></div>
+              <img
+                src="/gallery/IMG_0109_1773414857397.jpg"
+                alt="Completed roofing work by PropertyShield UK Ltd"
+                loading="lazy"
+                className="relative h-full w-full rounded-2xl object-cover border border-border shadow-2xl"
+              />
             </motion.div>
           </div>
         </div>

@@ -8,6 +8,10 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  app.get("/healthz", (_req, res) => {
+    res.status(200).json({ ok: true });
+  });
+
   app.post(api.enquiries.create.path, async (req, res) => {
     try {
       const input = api.enquiries.create.input.parse(req.body);

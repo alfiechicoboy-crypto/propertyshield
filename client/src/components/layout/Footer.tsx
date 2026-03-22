@@ -21,14 +21,18 @@ export function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/propertyshiield/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/propertyshiield/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
                 aria-label="Instagram"
               >
@@ -133,6 +137,18 @@ export function Footer() {
               <li>
                 <div className="flex items-start gap-3 text-muted-foreground">
                   <div className="w-9 h-9 rounded-full bg-card border border-border flex items-center justify-center shrink-0">
+                    <Phone className="w-4 h-4 text-primary" />
+                  </div>
+                  <div className="flex flex-col pt-0.5">
+                    <span className="text-xs font-semibold text-foreground uppercase tracking-wider mb-0.5">Business Hours</span>
+                    <span className="text-sm">Monday to Saturday</span>
+                    <span className="text-xs">Closed on Sunday</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="flex items-start gap-3 text-muted-foreground">
+                  <div className="w-9 h-9 rounded-full bg-card border border-border flex items-center justify-center shrink-0">
                     <MapPin className="w-4 h-4 text-primary" />
                   </div>
                   <div className="flex flex-col pt-0.5">
@@ -159,6 +175,7 @@ export function Footer() {
             <span className="bg-primary/10 px-2 py-1 rounded font-semibold text-primary/80">Fully Insured</span>
             <span className="bg-primary/10 px-2 py-1 rounded font-semibold text-primary/80">Checkatrade Rated: 9.44/10</span>
             <span className="bg-primary/10 px-2 py-1 rounded font-semibold text-primary/80">Family-run Business</span>
+            <a href="https://share.google/LyUdfbfxg17Dbnkcc" target="_blank" rel="noopener noreferrer" className="bg-primary/10 px-2 py-1 rounded font-semibold text-primary/80 hover:bg-primary/20 transition-colors">Google Business Profile</a>
             <span className="bg-primary/10 px-2 py-1 rounded font-semibold text-primary/80">Not affiliated with PropertyShield Ltd (Preston) or Shield AI UK Ltd</span>
           </div>
         </div>
