@@ -23,6 +23,15 @@ app.use(
 
 app.use(express.urlencoded({ extended: false }));
 
+// Redirect www to non-www for consistent link previews
+app.use((req, res, next) => {
+  if (req.hostname.startsWith("www.")) {
+    const host = req.hostname.slice(4);
+    return res.redirect(301, `${req.protocol}://${host}${req.originalUrl}`);
+  }
+  next();
+});
+
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
     hour: "numeric",
