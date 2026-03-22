@@ -54,7 +54,7 @@ const sections = [
     number: "6",
     title: "Retention of Title (Material Ownership)",
     content: [
-      "All materials supplied and installed by PropertyShield Roofing remain the property of the Contractor until full payment has been received.",
+      "All materials supplied and installed by PropertyShield UK Ltd remain the property of the Contractor until full payment has been received.",
       "Ownership of materials does not pass to the Customer until the contract is paid in full.",
       "If payment is not received, the Contractor reserves the right to reclaim materials, remove materials from site, and suspend guarantees.",
       "This right applies even if materials have been installed.",
@@ -98,7 +98,7 @@ const sections = [
     number: "11",
     title: "Third-Party Interference",
     content: [
-      "Only PropertyShield Roofing is authorised to alter, repair, or modify work carried out by the Contractor.",
+      "Only PropertyShield UK Ltd is authorised to alter, repair, or modify work carried out by the Contractor.",
       "If any other contractor, tradesperson, or individual interferes with the work, all guarantees will be void immediately.",
       "The Contractor accepts no liability for defects arising after third-party interference.",
     ],
@@ -107,7 +107,7 @@ const sections = [
     number: "12",
     title: "Guarantees",
     content: [
-      "Workmanship guarantees apply only to the specific work carried out by PropertyShield Roofing.",
+      "Workmanship guarantees apply only to the specific work carried out by PropertyShield UK Ltd.",
       "Guarantees do not cover storm damage, structural movement, lack of maintenance, third-party alterations, customer interference, or issues unrelated to the original work.",
       "The Contractor must be given the opportunity to inspect and repair any alleged defect.",
     ],
@@ -268,7 +268,7 @@ export default function TermsPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed"
           >
-            These Terms &amp; Conditions apply to all work undertaken by PropertyShield Roofing. Acceptance of a quotation, payment of a deposit, or instruction to commence works constitutes full acceptance of these Terms &amp; Conditions.
+            These Terms &amp; Conditions apply to all work undertaken by PropertyShield UK Ltd. Acceptance of a quotation, payment of a deposit, or instruction to commence works constitutes full acceptance of these Terms &amp; Conditions.
           </motion.p>
         </div>
       </section>

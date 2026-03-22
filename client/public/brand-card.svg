@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#080A0D" />
+      <stop offset="0.55" stop-color="#111418" />
+      <stop offset="1" stop-color="#0D1018" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D4A843" />
+      <stop offset="0.4" stop-color="#C9962A" />
+      <stop offset="0.75" stop-color="#B8851E" />
+      <stop offset="1" stop-color="#C49828" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect x="62" y="58" width="1076" height="514" rx="28" fill="rgba(255,255,255,0.02)" stroke="rgba(212,168,67,0.25)" />
+  <path d="M230 130 L390 185 L390 330 C390 422 310 494 230 534 C150 494 70 422 70 330 L70 185 Z" fill="#8B1A2C" />
+  <path d="M230 155 L366 203 L366 330 C366 410 294 474 230 510 C166 474 94 410 94 330 L94 203 Z" fill="#F8F4EA" />
+  <path d="M230 172 L356 216 L356 330 C356 401 289 459 230 492 C171 459 104 401 104 330 L104 216 Z" fill="url(#gold)" />
+  <text x="230" y="388" text-anchor="middle" font-family="Georgia, serif" font-size="186" font-weight="700" fill="#7B1528">P</text>
+  <text x="460" y="244" fill="#F8F4EA" font-family="Georgia, serif" font-size="72" font-weight="700">PropertyShield</text>
+  <text x="465" y="292" fill="#D4A843" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">UK LTD</text>
+  <text x="460" y="382" fill="#F8F4EA" font-family="Arial, sans-serif" font-size="34" font-weight="600">Darlington roofers for repairs, re-roofing,</text>
+  <text x="460" y="430" fill="#F8F4EA" font-family="Arial, sans-serif" font-size="34" font-weight="600">chimney work, flat roofs and roofline services.</text>
+  <text x="460" y="515" fill="#D4A843" font-family="Arial, sans-serif" font-size="28" font-weight="600">07753 351619  |  propertyshield128@gmail.com  |  propertyshielduk.com</text>
+</svg>

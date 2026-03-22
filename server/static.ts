@@ -10,10 +10,25 @@ export function serveStatic(app: Express) {
     );
   }
 
-  app.use(express.static(distPath));
+  app.use(
+    express.static(distPath, {
+      setHeaders: (res, filePath) => {
+        const extension = path.extname(filePath).toLowerCase();
+
+        if ([".png", ".jpg", ".jpeg", ".svg", ".webp", ".css", ".js", ".woff", ".woff2"].includes(extension)) {
+          res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+          res.setHeader("Expires", new Date(Date.now() + 31536000000).toUTCString());
+        }
+      },
+    }),
+  );
 
   // fall through to index.html if the file doesn't exist
-  app.use("/{*path}", (_req, res) => {
+  app.use("/{*path}", (req, res) => {
+    if (req.path.startsWith("/assets/") || req.path.startsWith("/gallery/")) {
+      return res.status(404).end();
+    }
+
     res.sendFile(path.resolve(distPath, "index.html"));
   });
 }
