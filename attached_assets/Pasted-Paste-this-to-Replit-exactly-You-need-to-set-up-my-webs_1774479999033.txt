@@ -1,0 +1,314 @@
+Paste this to Replit exactly:
+
+You need to set up my website branding assets properly using the exact same logo style my website already shows. Do not redesign it, do not swap fonts, do not simplify it into some different brand. Use the same PropertyShield identity: the shield emblem with the gold fill, red border, white inner outline, and the red “P” in the middle. The full logo version must also keep the “propertyshield” text exactly in the same style it currently appears on the website.
+
+I need this done properly for browser tabs, bookmarks, Google search, mobile icons, social sharing, and structured data. Deep dive and do not miss anything.
+	1.	Brand rules you must follow
+
+Use the exact existing PropertyShield logo as the source artwork.
+
+The logo has two usable versions:
+	•	Icon version = shield only with the “P” in the middle
+	•	Full logo version = shield plus the “propertyshield” text
+
+Do not create a new logo.
+Do not change the “P”.
+Do not use a different shield shape.
+Do not replace the text with another font.
+Do not crop the icon badly.
+Do not let the logo touch the edges.
+Do not stretch or squash anything.
+Always preserve aspect ratio.
+
+If the current website logo exists in code or assets already, reuse that exact source file first. If it is a screenshot-only asset, recreate a clean PNG from that exact logo style without altering the design.
+	2.	Which version to use where
+
+Use the shield-only version for:
+	•	favicon
+	•	browser tabs
+	•	bookmarks
+	•	Apple touch icon
+	•	Android / PWA icons
+	•	any tiny icon placements
+
+Use the full logo version for:
+	•	website header/logo area
+	•	Organization structured data logo
+	•	social sharing image if needed
+	•	any place where there is enough room to show both the shield and the wordmark
+
+Important:
+For tiny sizes, never use the full wordmark. The text will become unreadable. The favicon and bookmark icon must be the shield with the “P” in the middle only.
+	3.	Exact files you need to create
+
+Create these files inside /public:
+
+Shield/icon assets:
+	•	/public/favicon.ico
+	•	/public/favicon-16x16.png
+	•	/public/favicon-32x32.png
+	•	/public/favicon-48x48.png
+	•	/public/favicon-96x96.png
+	•	/public/favicon-192x192.png
+	•	/public/apple-touch-icon.png
+	•	/public/android-chrome-192x192.png
+	•	/public/android-chrome-512x512.png
+	•	/public/maskable-icon-512x512.png
+
+Full logo assets:
+	•	/public/logo-full.png
+	•	/public/logo-full-512.png
+	•	/public/logo-full-1024.png
+
+Optional dark/light header versions if needed:
+	•	/public/logo-full-darkbg.png
+	•	/public/logo-full-lightbg.png
+
+Social/share asset:
+	•	/public/og-image.png
+
+Manifest:
+	•	/public/site.webmanifest
+
+	4.	Exact visual treatment for the icon version
+
+Build the icon version from the existing shield only.
+
+The icon must contain:
+	•	dark red outer shield border
+	•	white inner border
+	•	gold/beige shield fill
+	•	red “P” centered inside
+
+The icon must be centered on canvas with breathing room around all sides.
+Do not crop it tight.
+Leave roughly 10 to 15 percent padding around the shield so it does not look cramped in browser tabs and bookmarks.
+
+Background handling:
+	•	For favicon PNG versions, transparent background is preferred if the shield edges stay clean
+	•	For Apple touch icon and maskable icon, use a solid background if needed for best visibility
+	•	If using a solid background, use the same dark premium tone already used on the website, not some random colour
+
+Make sure the “P” stays thick and readable at tiny sizes.
+At 16x16 and 32x32, manually check that the “P” is still visible and not muddy.
+If necessary, slightly sharpen or clean the edges from the source artwork, but do not change the logo design.
+	5.	Exact visual treatment for the full logo version
+
+The full logo must be the exact same website brand:
+	•	shield at top or to the side depending on current site design
+	•	word “propertyshield” exactly as used now
+	•	same colours
+	•	same proportions
+
+For transparent background export:
+	•	keep edges clean
+	•	no ugly fringe
+	•	no background remnants
+
+For dark background version:
+	•	use the same deep dark tone already used on the site
+	•	keep the gold wordmark readable
+	•	do not flatten detail
+
+Create a high-quality 1024px version so Google and other platforms have a clean source.
+	6.	Exact sizes and what each one is for
+
+Create these exact sizes:
+
+Favicon/icon:
+	•	16x16 for classic browser tabs
+	•	32x32 for browser tabs and bookmarks
+	•	48x48 minimum reliable Google favicon size
+	•	96x96 for sharper rendering
+	•	192x192 for Android and modern high-DPI uses
+
+Apple touch icon:
+	•	180x180
+
+Android/PWA:
+	•	192x192
+	•	512x512
+
+Full logo:
+	•	512x512 minimum for structured data / Google-friendly asset
+	•	1024x1024 for high-resolution source
+
+Open Graph:
+	•	1200x630
+
+	7.	Put the files in the site correctly
+
+In the HTML head, add all favicon and icon links properly. If this is React, Next, Vite, or another framework, place them in the correct head location so they actually render site-wide.
+
+Use this exact head setup and adjust only if the framework requires a different syntax:
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<meta property="og:image" content="https://www.propertyshielduk.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PropertyShield Roofing">
+<meta property="og:description" content="Professional roofing services from PropertyShield.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#111827">
+
+If the site has an existing head component, merge carefully without breaking anything.
+	8.	Create the web manifest properly
+
+Create /public/site.webmanifest with the correct icons:
+
+{
+  "name": "PropertyShield Roofing",
+  "short_name": "PropertyShield",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#111827",
+  "background_color": "#111827",
+  "display": "standalone"
+}
+
+If you can generate a proper maskable icon safely, do it. That means the shield sits comfortably within the safe zone and does not get clipped on Android launchers.
+	9.	Add structured data for Google correctly
+
+Add Organization schema using the full logo, not the tiny shield favicon.
+
+Use this:
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PropertyShield UK Ltd",
+  "url": "https://www.propertyshielduk.com",
+  "logo": "https://www.propertyshielduk.com/logo-full-512.png"
+}
+</script>
+
+If more business schema already exists, merge this cleanly rather than duplicating broken schema blocks.
+	10.	Open Graph image requirements
+
+Create /public/og-image.png at 1200x630.
+
+This image must match the PropertyShield brand and use the same logo identity. It should not look generic.
+
+Use:
+	•	dark premium background
+	•	full PropertyShield logo
+	•	optional supporting text like “Roofing Specialists” only if it looks clean
+	•	high contrast and readable composition
+
+Do not overcrowd it.
+Do not make it look like a cheap advert.
+Keep it premium and brand-consistent.
+	11.	Implementation checks you must do after setup
+
+After adding everything, verify all of this:
+
+A. Browser tab
+	•	The shield-only icon appears in the browser tab
+	•	It is centered
+	•	It is not blurry
+	•	It is not the old default icon
+
+B. Bookmark/favorites
+	•	The shield icon appears properly when bookmarked
+
+C. Mobile
+	•	Apple touch icon displays correctly when added to home screen
+	•	Android icons load from manifest
+
+D. Google-readiness
+	•	Full logo asset exists publicly at a clean URL
+	•	Structured data points to the correct full logo URL
+	•	favicon is accessible directly in browser
+	•	no 404 errors on any icon files
+
+E. Social preview
+	•	og-image loads correctly at its direct URL
+	•	page source includes the correct meta tags
+
+	12.	Cache-busting and why it matters
+
+Favicons are heavily cached by browsers. After implementation:
+	•	hard refresh the site
+	•	test in incognito
+	•	test on mobile
+	•	if old favicon remains, append versioning to links if needed, like ?v=2
+
+Example:
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
+
+Do this only if cache is causing issues.
+	13.	Quality rules for exporting
+
+When creating PNGs:
+	•	use clean anti-aliased edges
+	•	no fuzzy halos
+	•	no accidental background remnants
+	•	no excessive compression
+	•	no colour shift
+
+When creating favicon.ico:
+	•	include proper embedded sizes if possible
+	•	ensure it uses the shield-only mark
+
+When scaling down:
+	•	do not simply shrink once and hope for the best
+	•	inspect 16x16, 32x32, and 48x48 visually
+	•	tiny sizes must still look sharp
+
+	14.	Absolute do-not-miss points
+
+Do not use the wordmark as the favicon.
+Do not invent a different logo.
+Do not change the shield into a flat random icon.
+Do not use a generic roof icon instead.
+Do not leave broken links in head tags.
+Do not point structured data to a missing image.
+Do not use low-resolution source files.
+Do not forget the manifest.
+Do not forget Open Graph.
+Do not forget testing direct file URLs.
+	15.	Final deliverables I want from you
+
+After doing the work, tell me:
+	•	exactly which source file you used for the logo
+	•	every icon file you created
+	•	where in the project head/meta code was updated
+	•	where the Organization schema was added
+	•	whether transparent or dark background was used for each asset type
+	•	whether you had to version the favicon for cache
+
+	16.	Final instruction
+
+The goal is simple:
+Keep the exact same PropertyShield logo identity my website already uses, especially the shield with the “P” in the middle, and deploy it correctly everywhere so the website looks premium and consistent across Google, tabs, bookmarks, phones, and shared links.
+
+Do not simplify this task. Do it fully and properly.
+
+If you want, I can also turn that into a more technical version for Replit/Copilot that mentions common file paths for React, Vite, Next.js, or plain HTML so it matches your site structure exactly.
