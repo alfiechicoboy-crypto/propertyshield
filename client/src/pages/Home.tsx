@@ -177,12 +177,12 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: Award, title: "Skilled Workmanship", desc: "We take pride in delivering exceptional results on every project, big or small." },
-              { icon: Shield, title: "Honest Pricing", desc: "We take pride in delivering exceptional results on every project, big or small." },
-              { icon: Zap, title: "Fast Response", desc: "We take pride in delivering exceptional results on every project, big or small." },
-              { icon: ShieldCheck, title: "Professional Standards", desc: "We take pride in delivering exceptional results on every project, big or small." },
-              { icon: Clock, title: "Built to Last", desc: "We take pride in delivering exceptional results on every project, big or small." },
-              { icon: Star, title: "Customer Satisfaction", desc: "We take pride in delivering exceptional results on every project, big or small." }
+              { icon: Award, title: "Skilled Workmanship", desc: "Every job is completed to the highest standard by experienced tradesmen who take real pride in their craft." },
+              { icon: Shield, title: "Honest Pricing", desc: "Transparent, no-surprise quotations with no hidden fees. You know exactly what you're paying before work begins." },
+              { icon: Zap, title: "Fast Response", desc: "We respond to enquiries quickly and can arrange emergency callouts the same day for urgent roof issues." },
+              { icon: ShieldCheck, title: "Professional Standards", desc: "Fully insured, manufacturer-backed materials, and multi-year workmanship guarantees on every project." },
+              { icon: Clock, title: "Built to Last", desc: "We use premium materials and proven installation methods designed to protect your property for decades." },
+              { icon: Star, title: "Customer Satisfaction", desc: "Our customers consistently rate us 5 stars for reliability, communication, and quality of finished work." }
             ].map((item, i) => (
               <motion.div 
                 key={i} 
@@ -310,10 +310,20 @@ export default function HomePage() {
                 Based in Darlington, we provide premium roofing services across Darlington and the surrounding areas.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
-                {["Darlington", "Newton Aycliffe", "Bishop Auckland", "Stockton-on-Tees", "Middlesbrough", "Shildon", "Spennymoor"].map(area => (
-                  <span key={area} className="px-4 py-2 rounded-full bg-card border border-border text-sm font-medium text-foreground">
-                    {area}
-                  </span>
+                {[
+                  { name: "Darlington", slug: "darlington" },
+                  { name: "Newton Aycliffe", slug: "newton-aycliffe" },
+                  { name: "Bishop Auckland", slug: "bishop-auckland" },
+                  { name: "Stockton-on-Tees", slug: "stockton-on-tees" },
+                  { name: "Middlesbrough", slug: "middlesbrough" },
+                  { name: "Shildon", slug: "shildon" },
+                  { name: "Spennymoor", slug: "spennymoor" },
+                ].map(area => (
+                  <Link key={area.slug} href={`/areas/${area.slug}`}>
+                    <span className="inline-block px-4 py-2 rounded-full bg-card border border-border text-sm font-medium text-foreground hover:border-primary/50 transition-colors cursor-pointer">
+                      {area.name}
+                    </span>
+                  </Link>
                 ))}
               </div>
               <Link href="/areas">

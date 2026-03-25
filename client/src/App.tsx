@@ -18,6 +18,8 @@ import ContactPage from "@/pages/Contact";
 import TermsPage from "@/pages/Terms";
 import PrivacyPage from "@/pages/Privacy";
 import { serviceSeoEntries } from "@/lib/service-seo";
+import { areaSeoEntries } from "@/lib/area-seo";
+import AreaDetailPage from "@/pages/AreaDetail";
 
 const SITE_URL = "https://propertyshielduk.com";
 
@@ -140,6 +142,19 @@ function getSeoForPath(pathname: string): SeoEntry {
     }
   }
 
+  if (pathname.startsWith("/areas/")) {
+    const slug = pathname.replace("/areas/", "");
+    const area = areaSeoEntries[slug];
+
+    if (area) {
+      return {
+        title: area.metaTitle,
+        description: area.metaDescription,
+        canonicalPath: `/areas/${area.slug}`,
+      };
+    }
+  }
+
   return defaultSeo;
 }
 
@@ -203,6 +218,7 @@ function Router() {
         <Route path="/portfolio-projects" component={GalleryPage} />
         <Route path="/reviews" component={ReviewsPage} />
         <Route path="/areas" component={AreasPage} />
+        <Route path="/areas/:slug" component={AreaDetailPage} />
         <Route path="/contact" component={ContactPage} />
         <Route path="/contact-us" component={ContactPage} />
         <Route path="/terms" component={TermsPage} />

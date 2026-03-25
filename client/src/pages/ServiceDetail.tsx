@@ -40,7 +40,7 @@ export default function ServiceDetailPage() {
                 serviceType: data.shortTitle,
                 name: `${data.shortTitle} | PropertyShield UK Ltd`,
                 description: data.metaDescription,
-                areaServed: ["Darlington", "County Durham"],
+                areaServed: ["Darlington", "County Durham", "Teesside", "North Yorkshire"],
                 provider: {
                   "@type": "RoofingContractor",
                   name: "PropertyShield UK Ltd",
@@ -48,6 +48,20 @@ export default function ServiceDetailPage() {
                   telephone: "+447753351619",
                 },
                 url: `https://propertyshielduk.com/services/${data.slug}`,
+              }),
+            }}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://propertyshielduk.com/" },
+                  { "@type": "ListItem", position: 2, name: "Services", item: "https://propertyshielduk.com/services" },
+                  { "@type": "ListItem", position: 3, name: data.shortTitle, item: `https://propertyshielduk.com/services/${data.slug}` },
+                ],
               }),
             }}
           />

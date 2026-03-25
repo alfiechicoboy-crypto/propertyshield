@@ -93,6 +93,29 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            <h3 className="font-serif text-lg font-semibold text-foreground mt-8 mb-4 pb-2 border-b border-border/50">
+              Areas
+            </h3>
+            <ul className="space-y-3">
+              {[
+                { name: "Darlington", path: "/areas/darlington" },
+                { name: "Newton Aycliffe", path: "/areas/newton-aycliffe" },
+                { name: "Stockton-on-Tees", path: "/areas/stockton-on-tees" },
+                { name: "Middlesbrough", path: "/areas/middlesbrough" },
+                { name: "Bishop Auckland", path: "/areas/bishop-auckland" },
+                { name: "Durham", path: "/areas/durham" },
+              ].map((area) => (
+                <li key={area.name}>
+                  <Link
+                    href={area.path}
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center gap-1.5 group"
+                  >
+                    <ChevronRight className="w-3.5 h-3.5 text-primary/60 group-hover:text-primary transition-colors" />
+                    {area.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Contact */}

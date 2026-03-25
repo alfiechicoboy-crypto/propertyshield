@@ -1,96 +1,81 @@
-# Workspace
+# PropertyShield UK Ltd — Roofing Company Website
 
 ## Overview
 
-pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
+PropertyShield UK Ltd company website at propertyshielduk.com. React/Vite frontend with Express/Node.js backend and PostgreSQL via Drizzle ORM. Deployed on Render.
 
 ## Stack
 
-- **Monorepo tool**: pnpm workspaces
-- **Node.js version**: 24
-- **Package manager**: pnpm
-- **TypeScript version**: 5.9
-- **API framework**: Express 5
+- **Frontend**: React + Vite + TypeScript + Tailwind CSS + shadcn/ui
+- **Backend**: Express 5 (Node.js)
 - **Database**: PostgreSQL + Drizzle ORM
-- **Validation**: Zod (`zod/v4`), `drizzle-zod`
-- **API codegen**: Orval (from OpenAPI spec)
-- **Build**: esbuild (CJS bundle)
+- **Monorepo**: pnpm workspaces
+- **Deployment**: Render (connected to GitHub repo)
+- **Email**: Nodemailer with Gmail App Password
 
 ## Structure
 
 ```text
-artifacts-monorepo/
-├── artifacts/              # Deployable applications
-│   └── api-server/         # Express API server
-├── lib/                    # Shared libraries
-│   ├── api-spec/           # OpenAPI spec + Orval codegen config
-│   ├── api-client-react/   # Generated React Query hooks
-│   ├── api-zod/            # Generated Zod schemas from OpenAPI
-│   └── db/                 # Drizzle ORM schema + DB connection
-├── scripts/                # Utility scripts (single workspace package)
-│   └── src/                # Individual .ts scripts, run via `pnpm --filter @workspace/scripts run <script>`
-├── pnpm-workspace.yaml     # pnpm workspace (artifacts/*, lib/*, lib/integrations/*, scripts)
-├── tsconfig.base.json      # Shared TS options (composite, bundler resolution, es2022)
-├── tsconfig.json           # Root TS project references
-└── package.json            # Root package with hoisted devDeps
+client/                     # Frontend (React + Vite)
+├── index.html              # HTML shell with schema.org (RoofingContractor, FAQPage), OG tags, favicon system, SSR fallback
+├── public/
+│   ├── sitemap.xml         # 31+ URLs including 16 location pages
+│   ├── robots.txt          # Allows all crawlers, references sitemap
+│   ├── gallery/            # Project photos
+│   └── (favicons)          # 13 branded favicon assets
+├── src/
+│   ├── App.tsx             # SPA routing with per-page SEO (title, meta, canonical, OG)
+│   ├── pages/
+│   │   ├── Home.tsx        # Homepage with services grid, trust bar, testimonials, FAQ, areas
+│   │   ├── Areas.tsx       # Areas hub page with links to all 16 location pages
+│   │   ├── AreaDetail.tsx  # Programmatic location page component (BreadcrumbList + Service schema)
+│   │   ├── ServiceDetail.tsx # Service page (BreadcrumbList + Service schema)
+│   │   ├── Services.tsx, About.tsx, Gallery.tsx, Reviews.tsx, Contact.tsx, Terms.tsx, Privacy.tsx
+│   │   └── not-found.tsx
+│   ├── lib/
+│   │   ├── area-seo.ts     # 16 area entries with unique local content per area
+│   │   ├── service-seo.ts  # 8 service page data entries
+│   │   └── queryClient.ts
+│   └── components/
+│       ├── layout/
+│       │   ├── MainLayout.tsx, Header.tsx, Footer.tsx (with area links)
+│       │   └── CookieConsent.tsx
+│       └── ui/             # shadcn components
+server/
+├── index.ts, routes.ts, email.ts, storage.ts
+shared/
+└── schema.ts               # Drizzle schema (enquiries table)
 ```
 
-## TypeScript & Composite Projects
+## SEO Architecture
 
-Every package extends `tsconfig.base.json` which sets `composite: true`. The root `tsconfig.json` lists all packages as project references. This means:
+- **Programmatic location pages**: 16 area pages at `/areas/:slug` with unique content per area (not templated)
+- **Service pages**: 8 service pages at `/services/:slug`
+- **Schema markup**: RoofingContractor + AggregateRating + 3 reviews + service catalog + FAQPage (index.html), BreadcrumbList + Service (per page)
+- **Internal linking**: Homepage → area links, Footer → 6 area links + 6 service links, Areas hub → all 16 areas, each area page → 5 nearby areas
+- **SSR fallback**: index.html contains crawlable links to all services and all 16 area pages
+- **Sitemap**: 31 URLs with lastmod dates, changefreq, and priorities
+- **Canonical URLs**: Set per page via dynamic `<link rel="canonical">`
+- **Fonts**: Only DM Sans (sans) + Playfair Display (serif) — defined as CSS vars
 
-- **Always typecheck from the root** — run `pnpm run typecheck` (which runs `tsc --build --emitDeclarationOnly`). This builds the full dependency graph so that cross-package imports resolve correctly. Running `tsc` inside a single package will fail if its dependencies haven't been built yet.
-- **`emitDeclarationOnly`** — we only emit `.d.ts` files during typecheck; actual JS bundling is handled by esbuild/tsx/vite...etc, not `tsc`.
-- **Project references** — when package A depends on package B, A's `tsconfig.json` must list B in its `references` array. `tsc --build` uses this to determine build order and skip up-to-date packages.
+## Key Configuration
 
-## Root Scripts
+- **Business address**: 9 Frosterley Drive, Darlington, DL1 2JA (used in all schema markup)
+- **Phone**: 07753 351619 (Alfie), 07424 376189 (Jacob)
+- **Email**: propertyshield128@gmail.com
+- **Company No**: 15707554
+- **Social**: Facebook & Instagram (currently @propertyshiield — double 'i' typo)
+- **Domain**: propertyshielduk.com (hosted on Render)
 
-- `pnpm run build` — runs `typecheck` first, then recursively runs `build` in all packages that define it
-- `pnpm run typecheck` — runs `tsc --build --emitDeclarationOnly` using project references
+## Deployment
 
-## Packages
+- Push to GitHub triggers Render deploy
+- GitHub push command: `TOKEN=$(echo -n "${GITHUB_TOKEN}" | tr -d '[:space:]') && git push "https://x-access-token:${TOKEN}@github.com/alfiechicoboy-crypto/propertyshield.git" master`
+- Build command on Render: `npm run build`
+- Start command: `npm run start`
+- Environment vars on Render: DATABASE_URL, GMAIL_USER, GMAIL_APP_PASSWORD
 
-### `artifacts/api-server` (`@workspace/api-server`)
+## Development
 
-Express 5 API server. Routes live in `src/routes/` and use `@workspace/api-zod` for request and response validation and `@workspace/db` for persistence.
-
-- Entry: `src/index.ts` — reads `PORT`, starts Express
-- App setup: `src/app.ts` — mounts CORS, JSON/urlencoded parsing, routes at `/api`
-- Routes: `src/routes/index.ts` mounts sub-routers; `src/routes/health.ts` exposes `GET /health` (full path: `/api/health`)
-- Depends on: `@workspace/db`, `@workspace/api-zod`
-- `pnpm --filter @workspace/api-server run dev` — run the dev server
-- `pnpm --filter @workspace/api-server run build` — production esbuild bundle (`dist/index.cjs`)
-- Build bundles an allowlist of deps (express, cors, pg, drizzle-orm, zod, etc.) and externalizes the rest
-
-### `lib/db` (`@workspace/db`)
-
-Database layer using Drizzle ORM with PostgreSQL. Exports a Drizzle client instance and schema models.
-
-- `src/index.ts` — creates a `Pool` + Drizzle instance, exports schema
-- `src/schema/index.ts` — barrel re-export of all models
-- `src/schema/<modelname>.ts` — table definitions with `drizzle-zod` insert schemas (no models definitions exist right now)
-- `drizzle.config.ts` — Drizzle Kit config (requires `DATABASE_URL`, automatically provided by Replit)
-- Exports: `.` (pool, db, schema), `./schema` (schema only)
-
-Production migrations are handled by Replit when publishing. In development, we just use `pnpm --filter @workspace/db run push`, and we fallback to `pnpm --filter @workspace/db run push-force`.
-
-### `lib/api-spec` (`@workspace/api-spec`)
-
-Owns the OpenAPI 3.1 spec (`openapi.yaml`) and the Orval config (`orval.config.ts`). Running codegen produces output into two sibling packages:
-
-1. `lib/api-client-react/src/generated/` — React Query hooks + fetch client
-2. `lib/api-zod/src/generated/` — Zod schemas
-
-Run codegen: `pnpm --filter @workspace/api-spec run codegen`
-
-### `lib/api-zod` (`@workspace/api-zod`)
-
-Generated Zod schemas from the OpenAPI spec (e.g. `HealthCheckResponse`). Used by `api-server` for response validation.
-
-### `lib/api-client-react` (`@workspace/api-client-react`)
-
-Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHealthCheck`, `healthCheck`).
-
-### `scripts` (`@workspace/scripts`)
-
-Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.
+- `npm run dev` — starts Express backend + Vite frontend
+- Workflows: "Start application" runs `npm run dev`

@@ -71,7 +71,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -82,11 +82,19 @@
         "image": "https://propertyshielduk.com/logo-full-512.png",
         "email": "propertyshield128@gmail.com",
         "telephone": ["+447753351619", "+447424376189"],
+        "priceRange": "££",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "9 Frosterley Drive",
           "addressLocality": "Darlington",
           "addressRegion": "County Durham",
+          "postalCode": "DL1 2JA",
           "addressCountry": "GB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 54.5235,
+          "longitude": -1.5527
         },
         "openingHoursSpecification": [
           {
@@ -97,18 +105,63 @@
           }
         ],
         "areaServed": [
-          "Darlington",
-          "Newton Aycliffe",
-          "Bishop Auckland",
-          "Stockton-on-Tees",
-          "Middlesbrough",
-          "Spennymoor",
-          "Shildon",
-          "Hartlepool",
-          "Durham",
-          "Yarm",
-          "Northallerton"
+          { "@type": "City", "name": "Darlington" },
+          { "@type": "City", "name": "Newton Aycliffe" },
+          { "@type": "City", "name": "Bishop Auckland" },
+          { "@type": "City", "name": "Stockton-on-Tees" },
+          { "@type": "City", "name": "Middlesbrough" },
+          { "@type": "City", "name": "Spennymoor" },
+          { "@type": "City", "name": "Shildon" },
+          { "@type": "City", "name": "Hartlepool" },
+          { "@type": "City", "name": "Durham" },
+          { "@type": "City", "name": "Yarm" },
+          { "@type": "City", "name": "Northallerton" },
+          { "@type": "City", "name": "Sedgefield" },
+          { "@type": "City", "name": "Hurworth-on-Tees" },
+          { "@type": "City", "name": "Middleton St George" },
+          { "@type": "City", "name": "Heighington" },
+          { "@type": "City", "name": "Redcar" }
         ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "6",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "James T." },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "PropertyShield came out on a Sunday to fix a major leak. Professional, honest pricing, and exceptional work. Highly recommended."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Sarah M." },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "Had our entire roof replaced. The team was punctual, tidy, and the finished roof looks absolutely incredible. A truly premium service."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "David R." },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "Excellent chimney repointing job. They communicated clearly throughout the process and left the site immaculate."
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Roofing Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof Repairs", "url": "https://propertyshielduk.com/services/roof-repairs" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Re-Roofing", "url": "https://propertyshielduk.com/services/re-roofing" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flat Roofing", "url": "https://propertyshielduk.com/services/flat-roofing" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chimney Repairs", "url": "https://propertyshielduk.com/services/chimney-repairs" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fascias, Soffits & Guttering", "url": "https://propertyshielduk.com/services/fascias-soffits-guttering" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof Cleaning", "url": "https://propertyshielduk.com/services/roof-cleaning" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Roofing", "url": "https://propertyshielduk.com/services/emergency-roofing" } }
+          ]
+        },
         "sameAs": [
           "https://www.facebook.com/propertyshiield/",
           "https://www.instagram.com/propertyshiield/",
@@ -120,18 +173,40 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "PropertyShield UK Ltd",
-        "url": "https://propertyshielduk.com",
-        "logo": "https://propertyshielduk.com/logo-full-512.png",
-        "image": "https://propertyshielduk.com/logo-full-512.png",
-        "email": "propertyshield128@gmail.com",
-        "telephone": "+447753351619",
-        "sameAs": [
-          "https://www.facebook.com/propertyshiield/",
-          "https://www.instagram.com/propertyshiield/",
-          "https://share.google/LyUdfbfxg17Dbnkcc",
-          "https://www.checkatrade.com/trades/propertyshieldukltd"
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What roofing services do you offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer all aspects of roofing including roof repairs, full re-roofs, flat roofing, chimney repairs, fascias, soffits, guttering, and roof cleaning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide free quotes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide comprehensive, no-obligation free quotes for all prospective jobs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you help with emergency roof repairs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. We offer a rapid response emergency service for major leaks, storm damage, and structural roof issues."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you cover Darlington and surrounding areas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we are based in Darlington and cover a wide radius including Newton Aycliffe, Stockton, Middlesbrough, and beyond."
+            }
+          }
         ]
       }
     </script>
@@ -167,15 +242,46 @@
         <section>
           <h2>Our Roofing Services</h2>
           <nav aria-label="Primary site links">
-            <p><a href="/services">Roofing services</a></p>
-            <p><a href="/services/roof-repairs">Roof repairs</a></p>
-            <p><a href="/services/re-roofing">Re-roofing</a></p>
-            <p><a href="/services/flat-roofing">Flat roofing</a></p>
-            <p><a href="/services/chimney-repairs">Chimney repairs</a></p>
+            <p><a href="/services">All roofing services</a></p>
+            <p><a href="/services/roof-repairs">Roof repairs in Darlington</a></p>
+            <p><a href="/services/re-roofing">Re-roofing in Darlington</a></p>
+            <p><a href="/services/flat-roofing">Flat roofing in Darlington</a></p>
+            <p><a href="/services/tile-slate-replacement">Tile and slate replacement</a></p>
+            <p><a href="/services/chimney-repairs">Chimney repairs in Darlington</a></p>
             <p><a href="/services/fascias-soffits-guttering">Fascias, soffits and guttering</a></p>
-            <p><a href="/areas">Areas we cover</a></p>
+            <p><a href="/services/roof-cleaning">Roof cleaning and moss removal</a></p>
+            <p><a href="/services/emergency-roofing">Emergency roof repairs</a></p>
+          </nav>
+        </section>
+        <section>
+          <h2>Areas We Cover</h2>
+          <nav aria-label="Service area links">
+            <p><a href="/areas/darlington">Roofers in Darlington</a></p>
+            <p><a href="/areas/newton-aycliffe">Roofers in Newton Aycliffe</a></p>
+            <p><a href="/areas/bishop-auckland">Roofers in Bishop Auckland</a></p>
+            <p><a href="/areas/stockton-on-tees">Roofers in Stockton-on-Tees</a></p>
+            <p><a href="/areas/middlesbrough">Roofers in Middlesbrough</a></p>
+            <p><a href="/areas/hartlepool">Roofers in Hartlepool</a></p>
+            <p><a href="/areas/durham">Roofers in Durham</a></p>
+            <p><a href="/areas/yarm">Roofers in Yarm</a></p>
+            <p><a href="/areas/northallerton">Roofers in Northallerton</a></p>
+            <p><a href="/areas/spennymoor">Roofers in Spennymoor</a></p>
+            <p><a href="/areas/sedgefield">Roofers in Sedgefield</a></p>
+            <p><a href="/areas/hurworth">Roofers in Hurworth-on-Tees</a></p>
+            <p><a href="/areas/middleton-st-george">Roofers in Middleton St George</a></p>
+            <p><a href="/areas/heighington">Roofers in Heighington</a></p>
+            <p><a href="/areas/shildon">Roofers in Shildon</a></p>
+            <p><a href="/areas/redcar">Roofers in Redcar</a></p>
+          </nav>
+        </section>
+        <section>
+          <h2>More Information</h2>
+          <nav aria-label="Additional links">
             <p><a href="/about">About PropertyShield UK Ltd</a></p>
+            <p><a href="/gallery">Roofing project gallery</a></p>
+            <p><a href="/reviews">Customer reviews</a></p>
             <p><a href="/contact">Contact us for a free quote</a></p>
+            <p><a href="/areas">All areas we cover</a></p>
           </nav>
         </section>
       </main>
