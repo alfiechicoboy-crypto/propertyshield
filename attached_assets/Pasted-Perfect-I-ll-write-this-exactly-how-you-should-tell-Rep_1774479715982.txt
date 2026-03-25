@@ -1,0 +1,161 @@
+Perfect — I’ll write this exactly how you should tell Replit so it just does it properly without guessing.
+
+You can copy/paste this 👇
+
+⸻
+
+🧠 MESSAGE TO REPLIT (USE THIS)
+
+You are configuring branding assets for a live business website. Follow these instructions EXACTLY.
+
+⸻
+
+🔴 SOURCE LOGO
+
+Use the uploaded logo:
+	•	Shield with gold background
+	•	Red border
+	•	Letter “P” inside
+	•	Text: propertyshield
+
+⸻
+
+🔵 1. CREATE FAVICON (CRITICAL FOR GOOGLE)
+
+DO NOT use the full logo with text.
+
+Requirements:
+	•	Extract ONLY the shield with the “P”
+	•	Remove the “propertyshield” text completely
+	•	Center the shield perfectly
+	•	Background:
+	•	Transparent OR solid dark (#0f172a)
+
+Export these sizes:
+	•	48x48
+	•	96x96
+	•	192x192
+
+File names:
+
+/public/favicon-48.png
+/public/favicon-96.png
+/public/favicon-192.png
+/public/favicon.ico (generated from above)
+
+
+⸻
+
+🔵 2. MAIN LOGO (FOR WEBSITE + GOOGLE)
+
+Requirements:
+	•	Use FULL logo (shield + “propertyshield” text)
+	•	Keep original colours:
+	•	Gold shield
+	•	Red border
+	•	Dark background OR transparent
+	•	Clean edges, high quality
+
+Export:
+	•	512x512 (square)
+	•	1024x1024 (high-res)
+
+File names:
+
+/public/logo-512.png
+/public/logo-1024.png
+
+
+⸻
+
+🔵 3. APPLE TOUCH ICON (IPHONE)
+
+Requirements:
+	•	Use shield ONLY (no text)
+	•	Background MUST be solid (no transparency)
+	•	Centered with padding
+
+Size:
+	•	180x180
+
+File:
+
+/public/apple-touch-icon.png
+
+
+⸻
+
+🔵 4. OPEN GRAPH IMAGE (WHEN SHARED)
+
+Requirements:
+	•	Create a rectangle banner
+	•	Include:
+	•	Shield logo
+	•	Text: “PropertyShield Roofing”
+	•	Optional: “Darlington Roofing Specialists”
+	•	Dark premium background
+
+Size:
+	•	1200x630
+
+File:
+
+/public/og-image.png
+
+
+⸻
+
+🔵 5. IMPLEMENT IN HTML <head>
+
+Add this EXACT:
+
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<meta property="og:image" content="/og-image.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PropertyShield Roofing">
+<meta property="og:description" content="Professional Roofing Services in Darlington">
+
+
+⸻
+
+🔵 6. ADD GOOGLE LOGO STRUCTURED DATA
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PropertyShield UK Ltd",
+  "url": "https://www.propertyshielduk.com",
+  "logo": "https://www.propertyshielduk.com/logo-512.png"
+}
+</script>
+
+
+⸻
+
+⚠️ IMPORTANT RULES
+	•	NEVER stretch the logo
+	•	NEVER use text logo as favicon
+	•	ALWAYS keep aspect ratio
+	•	ALWAYS center icon versions
+	•	Keep padding so it doesn’t touch edges
+
+⸻
+
+✅ FINAL RESULT
+
+This setup ensures:
+	•	Logo shows properly in Google search
+	•	Clean icon in tabs + bookmarks
+	•	Looks premium when shared
+	•	Works on iPhone home screen
+	•	Consistent branding everywhere
+
+⸻
+
+If you want next level:
+I can redesign that shield slightly so it looks 10x cleaner + more modern for Google icons (right now it’s good but slightly detailed for small sizes).
