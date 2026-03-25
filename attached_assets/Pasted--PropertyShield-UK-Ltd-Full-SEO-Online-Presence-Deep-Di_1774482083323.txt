@@ -1,0 +1,308 @@
+# PropertyShield UK Ltd — Full SEO & Online Presence Deep Dive
+**Research Date:** 25 March 2026
+**Website:** https://propertyshielduk.com
+**Business:** Roofing company, 9 Frosterley Dr, Darlington DL1 2JA
+
+---
+
+## EXECUTIVE SUMMARY
+
+PropertyShield UK Ltd has a **well-built website** with strong technical foundations — proper meta tags, structured data, HTTPS, mobile-friendly design, and a sitemap. However, the business is **virtually invisible online** in all the places that actually generate leads. The site has **near-zero Google indexation** (only 1 old page indexed), **no verified Google Business Profile appearing in search**, **zero presence on any trade directory** (Checkatrade, TrustATrader, MyBuilder, Yell — none), and social media accounts that can't be found via search. Meanwhile, 15-20 competitors are actively ranking for every Darlington roofing keyword.
+
+The good news: the website itself is solid. The fix is about **getting it seen** — directory listings, Google Business optimization, reviews, and location pages.
+
+---
+
+## 1. WEBSITE TECHNICAL SEO — WHAT'S WORKING
+
+### Strong Points
+- **HTTPS** fully working with proper redirects (www → non-www)
+- **Unique title tags & meta descriptions** on every page (homepage, 8 service pages, about, gallery, reviews, areas, contact)
+- **Open Graph & Twitter cards** properly configured with 1200×630 og-image
+- **Schema.org structured data** — `RoofingContractor` JSON-LD with correct business details, service areas (11 towns), opening hours
+- **Heading structure** — single H1 per page, logical H2/H3 hierarchy
+- **Internal linking** — every service page linked from homepage, strong CTA links
+- **Sitemap** at `/sitemap.xml` with 16 URLs and priorities
+- **robots.txt** allowing all crawlers
+- **Mobile viewport** correctly configured
+- **Cookie consent** with GDPR-compliant accept/reject
+- **Favicon system** — complete with all 13 branded icon sizes
+
+### Issues Found
+
+#### CRITICAL
+1. **Near-zero Google indexation** — Only 1 page indexed (the old /faq/ page). Homepage, service pages, about, contact — NONE are in Google yet
+2. **SPA rendering limitation** — Site is React SPA. The SSR fallback in index.html only covers homepage content. Service pages have no server-rendered HTML for crawlers
+
+#### HIGH PRIORITY
+3. **No `<lastmod>` dates in sitemap.xml** — Google needs these for crawl scheduling
+4. **Privacy page missing from sitemap**
+5. **No FAQPage schema** — homepage has FAQ accordion but no structured data for it (missed rich snippet opportunity)
+6. **No BreadcrumbList schema** — service pages show breadcrumbs visually but no structured data
+7. **No Review/AggregateRating schema** — testimonials exist but no review schema for star ratings in search results
+
+#### MEDIUM PRIORITY
+8. **Massive Google Fonts request** — loading 25+ font families, hurting page speed
+9. **OG image not dynamic per page** — same image used for all pages when shared on social media
+10. **No `priceRange` in schema**
+11. **Redundant Organization schema** (already covered by RoofingContractor)
+
+---
+
+## 2. GOOGLE BUSINESS PROFILE — CRITICAL GAP
+
+### Finding: NO VERIFIED GOOGLE BUSINESS PROFILE FOUND
+
+Across all searches, **no Google Business Profile was found** for PropertyShield UK Ltd. This means:
+- **Zero Google reviews** and no star rating
+- **Not appearing in Google Maps** when people search "roofers near me"
+- **No Google Business posts**
+- **No photos on Google**
+- **Invisible in the local map pack** (the box of 3 businesses that appears at the top of local searches)
+
+Your website's schema.org data references a Google Business URL (`share.google/...`), suggesting an account may exist but it's either unverified or not properly set up.
+
+### What Competitors Have
+- **CJ Roofing Services**: 4.95/5 stars, 18 reviews on TrustATrader
+- **Renovate Roofing** (literally on the same street — 53 Frosterley Drive): Has active listings
+- **DHM Roofing**: Active Google profile with reviews
+- **Recommended Roofing**: Strong Google reviews praising reliability
+
+### ACTION NEEDED
+1. Go to [business.google.com/create](https://business.google.com/create)
+2. Claim or create your listing with:
+   - Name: PropertyShield UK Ltd
+   - Address: 9 Frosterley Dr, Darlington, DL1 2JA
+   - Phone: 07753 351619
+   - Category: "Roofing Contractor" (primary), "Roof Repair Service" (secondary)
+   - Website: https://propertyshielduk.com
+   - Hours: Mon-Sat 08:00-18:00
+3. Verify via postcard/phone
+4. Upload job photos immediately
+5. Start posting every 2-3 days
+
+---
+
+## 3. DIRECTORY LISTINGS — YOU'RE ON NONE OF THEM
+
+### PropertyShield is NOT listed on ANY major directory:
+
+| Directory | Listed? | Competitors Listed |
+|-----------|---------|-------------------|
+| Checkatrade | **NO** | 51 roofers in Darlington |
+| TrustATrader | **NO** | Multiple with reviews |
+| MyBuilder | **NO** | Rated 4.8/5, 106 reviews |
+| Yell | **NO** | Active listings |
+| Houzz UK | **NO** | 26 registered roofers |
+| MyJobQuote | **NO** | 269 trusted roofers |
+| Rated People | **NO** | Active listings |
+| Thomson Local | **NO** | Multiple listings |
+| Darlo Directory | **NO** | Local Darlington directory |
+| Bark | **NO** | Lead generation platform |
+| FreeIndex | **NO** | Free directory |
+| StarOfService | **NO** | 10 best listed |
+
+### Directories to Register On (Priority Order)
+1. **Checkatrade** — checkatrade.com (51 competitors already there, appears in top 10 for multiple keywords)
+2. **TrustATrader** — trustatrader.com (strong review platform)
+3. **MyBuilder** — mybuilder.com (lead generation)
+4. **Yell** — yell.com (local SEO signal)
+5. **Darlo Directory** — darlodirectory.com (local Darlington directory, less competition)
+6. **Rated People** — ratedpeople.com
+7. **MyJobQuote** — myjobquote.co.uk
+8. **Houzz UK** — houzz.co.uk
+9. **Thomson Local** — thomsonlocal.com
+10. **Bark** — bark.com
+11. **FreeIndex** — freeindex.co.uk
+12. **StarOfService** — starofservice.co.uk
+
+**NAP (Name, Address, Phone) must be IDENTICAL on every single listing** — inconsistency hurts rankings.
+
+---
+
+## 4. SOCIAL MEDIA PRESENCE
+
+### Accounts Found
+| Platform | Handle | Status |
+|----------|--------|--------|
+| Facebook | propertyshiield (double 'i') | Exists but not findable via search |
+| Instagram | propertyshiield (double 'i') | Exists but not findable via search |
+| TikTok | — | Not found |
+| YouTube | — | Not found |
+| Twitter/X | — | Not found |
+| LinkedIn | — | Not found |
+| NextDoor | — | Not found |
+
+### Key Issues
+
+#### Handle Spelling Problem (CRITICAL)
+The handle `propertyshiield` has a **double 'i'** which makes both accounts essentially unfindable. Not a single Google search returned either your Facebook or Instagram page. Customers searching for "PropertyShield" or "propertyshielduk" will never find you.
+
+**Fix:** Change handles to `propertyshielduk` on both platforms (if available), or `propertyshieldukltd`.
+
+#### Low Activity / Indexing
+Neither account appears in any search engine results, suggesting:
+- Very low follower counts
+- Minimal or no posting activity
+- Accounts may be private or very new
+
+### Social Media Recommendations
+1. **Fix handles** — Change from `propertyshiield` to `propertyshielduk`
+2. **Complete both profiles** — Full address, phone, website link, business hours, description
+3. **Set to public/business accounts** — Not personal/private
+4. **Post 2-3 times per week** — Before/after photos, customer reviews, job progress
+5. **Use local hashtags** — #DarlingtonRoofers #DarlingtonRoofing #NorthEastRoofing #CountyDurham #PropertyShieldUK
+6. **Create TikTok** — Roofing transformation videos perform extremely well
+7. **Create NextDoor business page** — Key platform for local trades
+8. **Consider YouTube Shorts** — Repurpose TikTok/Reels content
+
+---
+
+## 5. COMPETITOR ANALYSIS — WHO YOU'RE UP AGAINST
+
+### Top 10 Rankings for "Roofers in Darlington"
+
+| Rank | Who | Why They Rank |
+|------|-----|---------------|
+| 1 | DHM Roofing | Owns roofersindarlington.co.uk (exact-match domain) |
+| 2 | Checkatrade (directory) | 51 roofers listed |
+| 3 | Recommended Roofing Ltd | 15+ years, strong reviews |
+| 4 | Darlington Roofing Contractors | Owns darlingtonroofingcontractors.co.uk + est. 2003 |
+| 5 | Checkatrade (repairs) | Directory page |
+| 6 | Lord Roofing | Has dedicated /roofers-darlington/ location page |
+| 7 | MyBuilder (directory) | 106 reviews |
+| 8 | J Mitchell Roofing | Own website, competitive pricing |
+| 9 | McNulty and Sons | Wide service range |
+| 10 | Proper Job Roofing | Location page for Darlington |
+
+**PropertyShield UK Ltd: NOT FOUND anywhere in search results for ANY keyword.**
+
+### What Competitors Do That You Don't
+
+| What They Do | You |
+|--------------|-----|
+| Listed on Checkatrade (51 are) | Not listed |
+| Listed on TrustATrader | Not listed |
+| Listed on MyBuilder | Not listed |
+| Listed on Yell | Not listed |
+| Google Business with reviews | Not appearing |
+| Dedicated location pages (/roofers-darlington/) | No location pages |
+| "Emergency roofer" positioning | Not targeting |
+| "Same day repair" messaging | Not targeting |
+| Freephone numbers (0800) | Not using |
+| Accreditation badges (NFRC, CHAS) | Not visible |
+| Customer review widgets embedded | Not using |
+| Blog/content for SEO | Not present |
+
+---
+
+## 6. KEYWORD & LOCATION OPPORTUNITIES
+
+### Underserved Keywords (Low Competition)
+
+| Keyword | Competition | Opportunity |
+|---------|-------------|-------------|
+| "roof cleaning Darlington" | Very low | Almost nobody targets this |
+| "moss removal roof Darlington" | Very low | Untapped |
+| "roofers Middleton St George" | Very low | Nearby village, no one targets it |
+| "roofers Hurworth" | Very low | Affluent village |
+| "roofers Heighington" | Very low | No coverage |
+| "GRP fibreglass roof Darlington" | Low | Only 1 competitor |
+| "EPDM rubber roof Darlington" | Low | Few pages |
+| "lead work Darlington" | Very low | No one targets |
+| "slate roof repair Darlington" | Low | Material-specific gap |
+| "Velux window installation Darlington" | Very low | No dedicated pages |
+| "commercial roofing Darlington" | Low | Few dedicated pages |
+| "storm damage roof Darlington" | Low | Seasonal demand |
+| "roof repair DL1" / "DL2" / "DL3" | Low | Postcode searches underserved |
+
+### Underserved Locations (Create Pages For These)
+
+**Villages & Neighbourhoods Near Darlington:**
+- Middleton St George
+- Hurworth-on-Tees (affluent)
+- Heighington
+- Sadberge
+- Piercebridge
+- Croft-on-Tees
+- Mowden
+- Haughton Le Skerne
+- Cockerton
+
+**Nearby Towns (Low Competition):**
+- Newton Aycliffe
+- Shildon
+- Spennymoor
+- Sedgefield
+- Bishop Auckland
+
+---
+
+## 7. ACTION PLAN — PRIORITY ORDER
+
+### WEEK 1 — Foundation (Most Critical)
+1. **Verify Google Business Profile** — This is the #1 thing that will generate calls
+2. **Submit sitemap to Google Search Console** — Get your 16 pages indexed
+3. **Request indexing** of homepage and key service pages in Search Console
+4. **Register on Checkatrade** — 51 competitors are there, it appears in top 10 for multiple keywords
+5. **Fix social media handles** — Change from `propertyshiield` to `propertyshielduk`
+
+### WEEK 2 — Directory Blitz
+6. Register on TrustATrader, MyBuilder, Yell, Darlo Directory
+7. Register on Rated People, MyJobQuote, Thomson Local, Bark
+8. Register on FreeIndex, StarOfService, Houzz
+9. **Ensure identical NAP on every listing**
+10. Start collecting Google reviews from past customers
+
+### WEEK 3 — Content & Location Pages
+11. Add location pages: /roofers-darlington/, /roofers-stockton/, /roofers-hartlepool/ etc.
+12. Add village pages: /roofers-hurworth/, /roofers-middleton-st-george/
+13. Add FAQPage schema to homepage
+14. Add BreadcrumbList schema to service pages
+15. Add AggregateRating schema with reviews data
+16. Reduce Google Fonts loading (only load fonts actually used)
+
+### WEEK 4 — Growth
+17. Post on Google Business every 2-3 days
+18. Post on Facebook/Instagram 2-3 times per week
+19. Create TikTok account, start posting job videos
+20. Build internal links between all new pages
+21. Target emergency roofing keywords
+22. Consider NextDoor business page
+
+### ONGOING
+- Collect reviews (aim for 30+ Google reviews)
+- Post regularly on Google Business and social media
+- Add new location pages for surrounding areas
+- Monitor rankings and adjust
+
+---
+
+## 8. WHAT YOUR WEBSITE DOES WELL (Don't Change These)
+
+- Professional design with strong branding
+- Complete RoofingContractor schema with 11 service areas
+- 8 dedicated service pages with unique SEO content
+- Gallery with real project photos
+- Customer testimonials
+- Working contact form with email notifications
+- Cookie consent banner (GDPR compliant)
+- Proper canonical URLs with redirect aliases
+- Complete favicon and social sharing image system
+- Mobile-responsive design
+
+---
+
+## SOURCES
+- Live site audit: https://propertyshielduk.com
+- Google indexation check: site:propertyshielduk.com search
+- Sitemap: https://propertyshielduk.com/sitemap.xml
+- Robots.txt: https://propertyshielduk.com/robots.txt
+- Checkatrade Darlington: https://www.checkatrade.com/Search/Roofer/in/Darlington
+- MyBuilder Darlington: https://www.mybuilder.com/roofing/roofer-tradespeople/darlington
+- TrustATrader Darlington: https://www.trustatrader.com/roofers-in-darlington
+- Yell Darlington: https://www.yell.com/s/roofing+services-darlington.html
+- Darlo Directory: https://darlodirectory.com/cat/roofing-darlington/
+- MyJobQuote: https://www.myjobquote.co.uk/roofer/county-durham/darlington
+- Houzz UK: https://www.houzz.co.uk/professionals/roofing-and-gutters/c/Darlington--County-Durham
+- Google Business creation: https://business.google.com/create
