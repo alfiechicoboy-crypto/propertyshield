@@ -1,6 +1,7 @@
 import express, { type Express } from "express";
 import fs from "fs";
 import path from "path";
+import { injectSeoIntoHtml } from "./seo";
 
 export function serveStatic(app: Express) {
   const distPath = path.resolve(__dirname, "public");
@@ -9,6 +10,8 @@ export function serveStatic(app: Express) {
       `Could not find the build directory: ${distPath}, make sure to build the client first`,
     );
   }
+
+  const indexHtml = fs.readFileSync(path.resolve(distPath, "index.html"), "utf-8");
 
   app.use(
     express.static(distPath, {
@@ -23,12 +26,12 @@ export function serveStatic(app: Express) {
     }),
   );
 
-  // fall through to index.html if the file doesn't exist
   app.use("/{*path}", (req, res) => {
     if (req.path.startsWith("/assets/") || req.path.startsWith("/gallery/")) {
       return res.status(404).end();
     }
 
-    res.sendFile(path.resolve(distPath, "index.html"));
+    const html = injectSeoIntoHtml(indexHtml, req.originalUrl);
+    res.status(200).set({ "Content-Type": "text/html" }).end(html);
   });
 }
