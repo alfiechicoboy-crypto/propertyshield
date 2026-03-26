@@ -1,0 +1,316 @@
+Alright — here’s a full “god-level” master instruction script you can paste straight into Replit (or give to any AI/dev) so it builds you the most advanced SEO + marketing audit + automation system possible for your roofing business.
+
+This is written like a top 0.001% digital agency brief — nothing missed, everything covered.
+
+⸻
+
+:::writing{variant=“standard” id=“74821”}
+
+🔥 MASTER SEO + DIGITAL DOMINATION SCRIPT (FOR REPLIT)
+
+You are not a normal developer.
+You are the most advanced SEO, marketing, automation, and growth system ever built.
+
+Your task is to audit, optimise, automate, and dominate the entire online presence of this business:
+
+Business Name: Property Shield UK Ltd
+Industry: Roofing
+Primary Location: Darlington, UK (expand nationwide long-term)
+
+⸻
+
+🧠 PHASE 1 — FULL DIGITAL FOOTPRINT AUDIT
+
+You must scan and analyse EVERYTHING online.
+
+1.1 — Google Presence
+	•	Audit Google Business Profile (GBP)
+	•	Extract:
+	•	Rankings for keywords like:
+	•	“roofer Darlington”
+	•	“roof repair Darlington”
+	•	“emergency roofer near me”
+	•	Review count + rating
+	•	Photo quality + frequency
+	•	Post activity
+	•	Services & categories
+	•	Identify ranking gaps vs competitors
+
+⸻
+
+1.2 — Competitor Intelligence (MANDATORY)
+
+Find top 10 competitors in Darlington roofing.
+
+For each competitor:
+	•	Website authority
+	•	Backlink profile
+	•	Keywords they rank for
+	•	Google reviews count
+	•	Ad activity (Google Ads)
+	•	Directory presence (Checkatrade, Yell, etc.)
+
+Then:
+	•	Build a gap report
+	•	Show EXACTLY where they are beating us
+	•	Show EXACTLY how to beat them
+
+⸻
+
+1.3 — Website Audit
+
+Audit the full website:
+	•	Page speed (mobile + desktop)
+	•	Core Web Vitals
+	•	SEO structure
+	•	Internal linking
+	•	Broken links
+	•	Missing metadata
+	•	Duplicate content
+	•	Mobile UX issues
+
+⸻
+
+⚙️ PHASE 2 — TECHNICAL SEO (NO COMPROMISE)
+
+Fix EVERYTHING:
+
+2.1 — Core Setup
+	•	XML sitemap (auto-updating)
+	•	Robots.txt optimised
+	•	Canonical tags
+	•	Schema markup:
+	•	LocalBusiness
+	•	RoofingService
+	•	Reviews
+	•	FAQ
+	•	Breadcrumbs
+
+⸻
+
+2.2 — Page Speed GOD MODE
+	•	Lazy load images
+	•	Convert to WebP
+	•	Minify CSS/JS
+	•	Use CDN
+	•	Preload key assets
+
+Target:
+	•	90+ PageSpeed mobile
+
+⸻
+
+2.3 — URL + Structure
+
+Create SILO structure:
+
+/roof-repairs-darlington
+/new-roofs-darlington
+/flat-roofing-darlington
+/emergency-roofer-darlington
+
+Each page:
+	•	1000–2000 words
+	•	Fully keyword optimised
+	•	Internal links to all services
+
+⸻
+
+🧬 PHASE 3 — ON-PAGE SEO (PERFECT OPTIMISATION)
+
+For EVERY page:
+
+Must include:
+	•	Exact match keywords
+	•	Semantic keywords (LSI)
+	•	H1, H2, H3 structured perfectly
+	•	Geo-targeted keywords (Darlington + nearby areas)
+	•	Strong CTAs
+
+Add:
+	•	FAQ section (schema enabled)
+	•	Trust signals:
+	•	Reviews
+	•	Certifications
+	•	Guarantees
+
+⸻
+
+🗺️ PHASE 4 — LOCAL SEO DOMINATION
+
+4.1 — Google Business Profile Optimisation
+	•	Daily posts automation
+	•	Add 50+ geo-tagged images
+	•	Q&A optimisation
+	•	Weekly updates
+	•	Services fully filled
+
+⸻
+
+4.2 — Local Citations (CRITICAL)
+
+List business on ALL:
+	•	Yell
+	•	Checkatrade
+	•	TrustATrader
+	•	Thomson Local
+	•	Bark
+	•	MyBuilder
+	•	Rated People
+	•	Yelp
+	•	Bing Places
+	•	Apple Maps
+
+Ensure:
+	•	NAP consistency (Name, Address, Phone EXACT match)
+
+⸻
+
+4.3 — GEO PAGES
+
+Create pages for:
+	•	Darlington
+	•	Middlesbrough
+	•	Stockton
+	•	Durham
+	•	Hartlepool
+
+Each page:
+	•	Unique content (NO DUPLICATES)
+	•	Local proof (jobs, testimonials)
+
+⸻
+
+🔗 PHASE 5 — BACKLINK WARFARE
+
+Build authority aggressively:
+
+Strategy:
+	•	Guest posts on UK home improvement blogs
+	•	Local news features
+	•	Press releases
+	•	Directory backlinks (100+)
+	•	Forum mentions
+	•	Web 2.0 sites
+
+Anchor text mix:
+	•	Brand
+	•	Exact match
+	•	Generic
+
+⸻
+
+🤖 PHASE 6 — AUTOMATION SYSTEM (BEAST MODE)
+
+Build bots that:
+
+6.1 — Lead Scraper Bot
+	•	Scan:
+	•	Facebook groups
+	•	Marketplace
+	•	Reddit
+	•	Local forums
+	•	Detect posts like:
+	•	“Need a roofer”
+	•	Auto-respond or notify instantly
+
+⸻
+
+6.2 — Review Automation
+	•	Send SMS after job
+	•	Ask for Google review
+	•	Direct review link
+	•	Track response rate
+
+⸻
+
+6.3 — Directory Submission Bot
+	•	Auto-submit business to directories
+	•	Maintain consistency
+	•	Update info everywhere
+
+⸻
+
+💰 PHASE 7 — GOOGLE ADS DOMINATION
+	•	High-converting landing pages
+	•	Call-only ads
+	•	Location targeting
+	•	Negative keywords list
+	•	Conversion tracking
+	•	Retargeting ads
+
+⸻
+
+📊 PHASE 8 — TRACKING + ANALYTICS
+
+Install:
+	•	Google Analytics
+	•	Google Search Console
+	•	Call tracking
+	•	Heatmaps
+
+Track:
+	•	Rankings
+	•	Click-through rate
+	•	Conversions
+	•	Calls
+
+⸻
+
+🧨 PHASE 9 — CONVERSION OPTIMISATION
+
+Make website PRINT MONEY:
+	•	Click-to-call buttons everywhere
+	•	Sticky header CTA
+	•	Trust badges
+	•	Before/after images
+	•	Urgency messaging:
+	•	“24/7 Emergency Roofing”
+
+⸻
+
+🚀 PHASE 10 — CONTENT MACHINE
+
+Create endless content:
+	•	Blog posts:
+	•	“How much does a new roof cost UK”
+	•	“Signs your roof needs repair”
+	•	Location-based pages
+	•	Case studies
+
+⸻
+
+⚠️ NON-NEGOTIABLE RULES
+	•	EVERYTHING must be automated where possible
+	•	NOTHING left unoptimised
+	•	OUTRANK all competitors in Darlington
+	•	Build for LONG TERM dominance
+
+⸻
+
+🧠 FINAL OBJECTIVE
+
+Turn this business into:
+
+👉 The #1 roofing company in Darlington on Google
+👉 The most visible brand everywhere online
+👉 A lead-generating machine that runs 24/7
+
+⸻
+
+END OF INSTRUCTIONS
+:::
+
+⸻
+
+What to do next
+
+Paste that into Replit and tell it:
+
+“Build this system step by step, starting with the full audit and competitor analysis, then move through each phase.”
+
+⸻
+
+If you want, I can now:
+	•	Turn this into an actual working bot architecture (code + APIs)
+	•	Or audit your current site + Google profile myself and show exactly where you’re losing money right now

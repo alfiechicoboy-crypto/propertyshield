@@ -19,7 +19,7 @@ PropertyShield UK Ltd company website at propertyshielduk.com. React/Vite fronte
 client/                     # Frontend (React + Vite)
 ├── index.html              # HTML shell with schema.org (RoofingContractor, FAQPage), OG tags, favicon system, SSR fallback
 ├── public/
-│   ├── sitemap.xml         # 31+ URLs including 16 location pages
+│   ├── sitemap.xml         # 38+ URLs including 16 location pages + 7 blog URLs
 │   ├── robots.txt          # Allows all crawlers, references sitemap
 │   ├── gallery/            # Project photos
 │   └── (favicons)          # 13 branded favicon assets
@@ -30,6 +30,8 @@ client/                     # Frontend (React + Vite)
 │   │   ├── Areas.tsx       # Areas hub page with links to all 16 location pages
 │   │   ├── AreaDetail.tsx  # Programmatic location page component (BreadcrumbList + Service schema)
 │   │   ├── ServiceDetail.tsx # Service page (BreadcrumbList + Service schema)
+│   │   ├── Blog.tsx        # Blog listing page with 6 articles
+│   │   ├── BlogArticle.tsx # Blog article detail page with BlogPosting JSON-LD schema
 │   │   ├── Services.tsx, About.tsx, Gallery.tsx, Reviews.tsx, Contact.tsx, Terms.tsx, Privacy.tsx
 │   │   └── not-found.tsx
 │   ├── lib/
@@ -38,24 +40,29 @@ client/                     # Frontend (React + Vite)
 │   │   └── queryClient.ts
 │   └── components/
 │       ├── layout/
-│       │   ├── MainLayout.tsx, Header.tsx, Footer.tsx (with area links)
+│       │   ├── MainLayout.tsx, Navbar.tsx, Footer.tsx (with area/service/blog links)
 │       │   └── CookieConsent.tsx
 │       └── ui/             # shadcn components
 server/
 ├── index.ts, routes.ts, email.ts, storage.ts
+├── seo.ts                  # Server-side SEO injection (unique title/desc/canonical/OG per URL)
+├── static.ts               # Production static serving with SEO injection
+├── vite.ts                 # Dev server with SEO injection
 shared/
 └── schema.ts               # Drizzle schema (enquiries table)
 ```
 
 ## SEO Architecture
 
+- **Server-side SEO injection**: `server/seo.ts` injects unique title, meta description, canonical, OG, and Twitter tags per URL into the HTML before serving — ensures crawlers see correct metadata without JS rendering
 - **Programmatic location pages**: 16 area pages at `/areas/:slug` with unique content per area (not templated)
 - **Service pages**: 8 service pages at `/services/:slug`
-- **Schema markup**: RoofingContractor + AggregateRating + 3 reviews + service catalog + FAQPage (index.html), BreadcrumbList + Service (per page)
-- **Internal linking**: Homepage → area links, Footer → 6 area links + 6 service links, Areas hub → all 16 areas, each area page → 5 nearby areas
-- **SSR fallback**: index.html contains crawlable links to all services and all 16 area pages
-- **Sitemap**: 31 URLs with lastmod dates, changefreq, and priorities
-- **Canonical URLs**: Set per page via dynamic `<link rel="canonical">`
+- **Blog section**: 6 articles at `/blog/:slug` with BlogPosting JSON-LD schema, targeting local roofing keywords
+- **Schema markup**: RoofingContractor + AggregateRating + reviews + service catalog + potentialAction (index.html), BreadcrumbList + Service (per page), BlogPosting (per article)
+- **Internal linking**: Homepage → area links, Footer → area/service/blog links, Areas hub → all 16 areas, each area page → 5 nearby areas, blog articles → contact CTA
+- **SSR fallback**: index.html contains crawlable links to all services, 16 area pages, and all blog articles
+- **Sitemap**: 38+ URLs with lastmod dates, changefreq, and priorities
+- **Canonical URLs**: Server-side injection per URL, including correct canonicals for alias routes
 - **Fonts**: Only DM Sans (sans) + Playfair Display (serif) — defined as CSS vars
 
 ## Key Configuration

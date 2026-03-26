@@ -20,6 +20,8 @@ import PrivacyPage from "@/pages/Privacy";
 import { serviceSeoEntries } from "@/lib/service-seo";
 import { areaSeoEntries } from "@/lib/area-seo";
 import AreaDetailPage from "@/pages/AreaDetail";
+import BlogPage, { blogArticles } from "@/pages/Blog";
+import BlogArticlePage from "@/pages/BlogArticle";
 
 const SITE_URL = "https://propertyshielduk.com";
 
@@ -122,6 +124,12 @@ const seoByPath: Record<string, SeoEntry> = {
       "Read the PropertyShield UK Ltd privacy policy covering website enquiries, analytics consent, and personal data handling.",
     canonicalPath: "/privacy",
   },
+  "/blog": {
+    title: "Roofing Advice & Guides | PropertyShield UK Ltd",
+    description:
+      "Helpful articles about roofing costs, maintenance tips, and expert advice for homeowners in Darlington and County Durham.",
+    canonicalPath: "/blog",
+  },
 };
 
 function getSeoForPath(pathname: string): SeoEntry {
@@ -151,6 +159,19 @@ function getSeoForPath(pathname: string): SeoEntry {
         title: area.metaTitle,
         description: area.metaDescription,
         canonicalPath: `/areas/${area.slug}`,
+      };
+    }
+  }
+
+  if (pathname.startsWith("/blog/")) {
+    const slug = pathname.replace("/blog/", "");
+    const article = blogArticles.find(a => a.slug === slug);
+
+    if (article) {
+      return {
+        title: `${article.title} | PropertyShield UK Ltd`,
+        description: article.excerpt.slice(0, 155) + "...",
+        canonicalPath: `/blog/${article.slug}`,
       };
     }
   }
@@ -219,6 +240,8 @@ function Router() {
         <Route path="/reviews" component={ReviewsPage} />
         <Route path="/areas" component={AreasPage} />
         <Route path="/areas/:slug" component={AreaDetailPage} />
+        <Route path="/blog" component={BlogPage} />
+        <Route path="/blog/:slug" component={BlogArticlePage} />
         <Route path="/contact" component={ContactPage} />
         <Route path="/contact-us" component={ContactPage} />
         <Route path="/terms" component={TermsPage} />

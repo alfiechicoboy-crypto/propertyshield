@@ -63,6 +63,48 @@ const staticSeo: Record<string, SeoEntry> = {
       "Read the PropertyShield UK Ltd privacy policy covering website enquiries, analytics consent, and personal data handling.",
     canonicalPath: "/privacy",
   },
+  "/blog": {
+    title: "Roofing Advice & Guides | PropertyShield UK Ltd",
+    description:
+      "Helpful articles about roofing costs, maintenance tips, and expert advice for homeowners in Darlington and County Durham.",
+    canonicalPath: "/blog",
+  },
+  "/about-us": {
+    title: "About PropertyShield UK Ltd | Trusted Roofers in Darlington",
+    description:
+      "Learn about PropertyShield UK Ltd, a trusted Darlington roofing company focused on reliable workmanship, honest quotations, and long-lasting roofing solutions.",
+    canonicalPath: "/about",
+  },
+  "/portfolio-projects": {
+    title: "Roofing Project Gallery | PropertyShield UK Ltd",
+    description:
+      "View recent roofing projects completed by PropertyShield UK Ltd across Darlington and surrounding areas.",
+    canonicalPath: "/gallery",
+  },
+  "/contact-us": {
+    title: "Contact PropertyShield UK Ltd | Free Roofing Quotes",
+    description:
+      "Contact PropertyShield UK Ltd for roofing and exterior cleaning enquiries in Darlington. Request a free quote today.",
+    canonicalPath: "/contact",
+  },
+  "/faq": {
+    title: "Terms & Legal Information | PropertyShield UK Ltd",
+    description:
+      "Read PropertyShield UK Ltd terms, legal information, and service conditions for roofing works in Darlington and surrounding areas.",
+    canonicalPath: "/terms",
+  },
+  "/legal-notice": {
+    title: "Terms & Legal Information | PropertyShield UK Ltd",
+    description:
+      "Read PropertyShield UK Ltd terms, legal information, and service conditions for roofing works in Darlington and surrounding areas.",
+    canonicalPath: "/terms",
+  },
+  "/contact-us/privacy-policy": {
+    title: "Privacy Policy | PropertyShield UK Ltd",
+    description:
+      "Read the PropertyShield UK Ltd privacy policy covering website enquiries, analytics consent, and personal data handling.",
+    canonicalPath: "/privacy",
+  },
 };
 
 const serviceSeo: Record<string, SeoEntry> = {
@@ -230,6 +272,45 @@ export function getSeoForPath(rawUrl: string): SeoEntry {
   const areaMatch = pathname.match(/^\/areas\/([a-z0-9-]+)$/);
   if (areaMatch && areaSeo[areaMatch[1]]) {
     return areaSeo[areaMatch[1]];
+  }
+
+  const blogMatch = pathname.match(/^\/blog\/([a-z0-9-]+)$/);
+  if (blogMatch) {
+    const blogSeoEntries: Record<string, SeoEntry> = {
+      "how-much-does-new-roof-cost-darlington": {
+        title: "How Much Does a New Roof Cost in Darlington? (2026 Guide) | PropertyShield UK Ltd",
+        description: "A full re-roof in Darlington typically costs between £5,000 and £12,000. We break down costs for terraced, semi-detached, and detached homes across County Durham.",
+        canonicalPath: "/blog/how-much-does-new-roof-cost-darlington",
+      },
+      "signs-your-roof-needs-repair": {
+        title: "7 Warning Signs Your Roof Needs Repair | PropertyShield UK Ltd",
+        description: "From missing slates to damp patches, these seven signs indicate your roof needs professional attention. Catching problems early saves thousands.",
+        canonicalPath: "/blog/signs-your-roof-needs-repair",
+      },
+      "flat-roof-vs-pitched-roof-which-is-right": {
+        title: "Flat Roof vs Pitched Roof: Which Is Right? | PropertyShield UK Ltd",
+        description: "Compare flat and pitched roofs for North East properties — costs, lifespan, maintenance, and which works best in County Durham's climate.",
+        canonicalPath: "/blog/flat-roof-vs-pitched-roof-which-is-right",
+      },
+      "emergency-roof-repairs-darlington-what-to-do": {
+        title: "Emergency Roof Repairs Darlington — What to Do | PropertyShield UK Ltd",
+        description: "Step-by-step guide on what to do when your roof leaks. How to minimise damage and get emergency roofing help in Darlington fast.",
+        canonicalPath: "/blog/emergency-roof-repairs-darlington-what-to-do",
+      },
+      "choosing-right-roofing-contractor-county-durham": {
+        title: "How to Choose a Roofing Contractor in County Durham | PropertyShield UK Ltd",
+        description: "Key questions to ask, credentials to check, and red flags to avoid when hiring a roofing contractor in Darlington and County Durham.",
+        canonicalPath: "/blog/choosing-right-roofing-contractor-county-durham",
+      },
+      "roof-maintenance-checklist-north-east": {
+        title: "Seasonal Roof Maintenance Checklist for North East Homeowners | PropertyShield UK Ltd",
+        description: "Spring, summer, autumn, and winter roof care tips for North East properties. Prevent costly repairs with this seasonal checklist.",
+        canonicalPath: "/blog/roof-maintenance-checklist-north-east",
+      },
+    };
+    if (blogSeoEntries[blogMatch[1]]) {
+      return blogSeoEntries[blogMatch[1]];
+    }
   }
 
   return defaultSeo;
